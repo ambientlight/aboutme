@@ -1,0 +1,34 @@
+{
+  "name": "aboutme",
+  "reason": {
+    "react-jsx": 3
+  },
+  "version": "0.0.1",
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    }
+  ],
+  "package-specs": {
+    "module": "commonjs"
+  },
+  "suffix": ".bs.js",
+  "bs-dependencies": [
+    "bs-webapi",
+    "bs-css",
+    "bs-css-emotion",
+    "reason-react",
+    "reductive",
+    "reductive-dev-tools"
+  ],
+  "bs-dev-dependencies": [
+  ],
+  "namespace": false,
+  "warnings": {},
+  "refmt": 3,
+  "bsc-flags": [
+    "-bs-g"
+  ],
+  "ppx-flags": []
+}
