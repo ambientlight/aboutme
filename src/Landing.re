@@ -16,7 +16,7 @@ module Styles {
 
     fontFamily(`custom(Fonts.jost)),
     color(white)
-  ])
+  ]);
 };
 
 [@react.component]

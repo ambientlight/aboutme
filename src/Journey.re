@@ -47,8 +47,11 @@ let nctu: PositionInfo.jobInfo = {
 
 [@react.component]
 let make = () => 
-  <div className=Styles.root>
-    <PositionInfo info=geothings/>
-    <PositionInfo info=sixnology/>
-    <PositionInfo info=nctu/>
-  </div>
+  <>
+    <Seperator title="My Journey"/>
+    <div className=Styles.root>
+      <PositionInfo info=geothings/>
+      <PositionInfo info=sixnology/>
+      <PositionInfo info=nctu/>
+    </div>
+  </>
