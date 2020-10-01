@@ -94,7 +94,21 @@ module Style {
   let ctaButton = merge([
     button,
     style([
-      borderColor(blue)
+      borderColor(blue),
+
+      selector("&:hover", [
+        backgroundColor(blue)
+      ])
+    ])
+  ])
+
+  let ctaButton2 = merge([
+    button,
+    style([
+      selector("&:hover", [
+        backgroundColor(grey),
+        color(black)
+      ])
     ])
   ])
 };
@@ -121,15 +135,14 @@ let make = () =>
       </div>
       <section className=Style.mainInfo>
         {ReasonReact.string("
-          Fortunate as my work has been greatly cross-functional.
-          After starting as an iOS Developer, I have been involved in full-stack development, deveops, cloud architecture and deep-learning.
-          I lead development at GeoThings Inc, in spare time I love experimenting with various stacks and contributing to open source,
-          which was thus far centered around redux and ReasonML ecosystem.  
+          Thus far my work has been greatly cross-functional. 
+          After starting as an iOS Developer, I have been involved in full-stack development, cloud architecture, deep-learning among other things. 
+          I lead development at GeoThings Inc. My open-source contribution is primarily centered around redux and ReasonML ecosystem. 
         ")}
       </section>
       <div className=Style.ctaButtonsBlock>
         <button className=Style.ctaButton>{ReasonReact.string("Download CV")}</button>
-        <button className=Style.button>{ReasonReact.string("Get In Touch")}</button>
+        <button className=Style.ctaButton2>{ReasonReact.string("Get In Touch")}</button>
       </div>
     </div>
   </div>
