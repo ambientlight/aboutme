@@ -15,11 +15,13 @@ module Styles {
   let entityImg = style([
     width(px(200)),
     height(px(200)),
-    borderRadius(px(30))
+    borderRadius(px(30)),
+    backgroundColor(white),
+    padding(px(20))
   ]);
 
   let companyName = style([
-    marginBottom(`zero)
+    margin(`zero)
   ]);
 
   let jobTitle = style([
@@ -54,7 +56,7 @@ let make = (~info: jobInfo) =>
         {
           info.description 
           |> String.split_on_char('\n')
-          |> List.map(str => <p>{ReasonReact.string(str)}</p>)
+          |. Belt.List.mapWithIndex((idx, str) => <p key={string_of_int(idx)}>{ReasonReact.string(str)}</p>)
           |> Array.of_list
           |> ReasonReact.array
         }

@@ -36,9 +36,19 @@ let sixnology: PositionInfo.jobInfo = {
     "I've learned a lot overall, build my iOS background and had some great time."
 };
 
+let nctu: PositionInfo.jobInfo = {
+  companyName: "National Chiao Tung University",
+  jobTitle: "BS Computer Science, BS Finance and Information Management",
+  duration: "earned in June 2015",
+  imgUrl: [%bs.raw "require('assets/imgs/NCTU_emblem.png')"],
+  description: 
+    "Fortunate to come and study in Taiwan, I have to give great credit to NCTU for who I am now. Development career was my ultimate goal, but as I was also curious to explore stock trading, I decided to get a double degree. Doing that and working at same time was a decent challenge. "
+};
+
 [@react.component]
 let make = () => 
   <div className=Styles.root>
     <PositionInfo info=geothings/>
     <PositionInfo info=sixnology/>
-  </div>;
+    <PositionInfo info=nctu/>
+  </div>
