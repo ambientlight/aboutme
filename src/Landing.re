@@ -24,6 +24,7 @@ let make = () =>
   <div className=Styles.root>
     <Header/>
     <Intro/>
+    <Stacks/>
     <Journey/>
     <Footer/>
   </div>
