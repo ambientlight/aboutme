@@ -73,10 +73,10 @@ module Style {
   let button = style([
     margin(px(8)),
     padding2(~v=px(9), ~h=px(26)),
-    border(px(2), `solid, grey),
+    border(px(3), `solid, grey),
     borderRadius(px(20)),
-    background(`none),
-
+    background(rgb(51, 51, 51)),
+    
     fontSize(px(15)),
     fontFamily(`custom(Fonts.jost)),
     cursor(`pointer),

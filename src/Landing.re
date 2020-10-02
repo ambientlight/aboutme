@@ -12,7 +12,7 @@ module Styles {
     overflowX(Css.Types.Overflow.hidden),
     overflowY(Css.Types.Overflow.scroll),
 
-    backgroundColor(rgb(0,0,0)),
+    backgroundColor(rgb(33,33,33)),
 
     fontFamily(`custom(Fonts.jost)),
     color(white)
