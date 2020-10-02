@@ -135,9 +135,9 @@ let make = () =>
       </div>
       <section className=Style.mainInfo>
         {ReasonReact.string("
-          Thus far my work has been greatly cross-functional. 
+          My work has been greatly cross-functional up to this point.
           After starting as an iOS Developer, I have been involved in full-stack development, cloud architecture, deep-learning among other things. 
-          I lead development at GeoThings Inc. My open-source contribution is primarily centered around redux and ReasonML ecosystem. 
+          I lead development at GeoThings Inc. My open-source contribution is primarily centered around redux and ReasonML(ReScript) ecosystem. 
         ")}
       </section>
       <div className=Style.ctaButtonsBlock>
