@@ -42,7 +42,7 @@ let nctu: PositionInfo.jobInfo = {
   duration: "earned in June 2015",
   imgUrl: [%bs.raw "require('assets/imgs/NCTU_emblem.png')"],
   description: 
-    "Fortunate to come and study in Taiwan, I have to give great credit to NCTU for who I am now. Development career was my ultimate goal, but as I was also curious to explore stock trading, I decided to get a double degree. Doing that and working at same time was a decent challenge. "
+    "Fortunate to come and study in Taiwan, I have to give great credit to NCTU for who I am now. Development career was my ultimate goal, but as I was also curious to explore stock trading, I decided to get a double degree. "
 };
 
 [@react.component]
