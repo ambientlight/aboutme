@@ -3,10 +3,32 @@ open Css;
 module Style {
   let root = style([
     display(`flex),
+    flexWrap(`wrap),
     alignItems(`center),
+  ]);
 
-    selector("& > *", [
-      margin(px(20))
+  // compensate absense of design grid by making sure text and avatar left and right empty space allign
+  let introMargin = 32
+
+  let textInfo = style([
+    display(`flex),
+    flexDirection(`column),
+    justifyContent(`center),
+    
+    Media.atMost(Media.Breakpoint.Phone, [
+      width(`percent(100.)),
+      alignItems(`center),
+      // padding2(~v=`zero, ~h=px(introMargin * 2))
+    ]),
+    Media.atLeast(Media.Breakpoint.Tablet, [
+      width(`percent(50.0)),
+      paddingRight(px(introMargin))
+    ]),
+    Media.atLeast(Media.Breakpoint.Laptop, [
+      width(px(400))
+    ]),
+    Media.atLeast(Media.Breakpoint.Desktop, [
+      width(px(600))
     ])
   ]);
 
@@ -14,22 +36,49 @@ module Style {
     flexShrink(0.),
 
     backgroundColor(white),
-    width(px(320)),
-    height(px(320)),
     borderRadius(`percent(50.)),
+    margin(px(introMargin)),
 
     border(px(16), `solid, rgb(65, 65, 65)),
     backgroundImage(url([%bs.raw "require('assets/imgs/avatar.png')"])),
-    backgroundSize(`contain)
+    backgroundSize(`contain),
+
+    ...Media.define(
+      ~smallPhone=[width(px(200)), height(px(200))],
+      ~phone=[width(px(250)), height(px(250))],
+      ~tablet=[width(px(300)), height(px(300))],
+      ~default=[width(px(400)), height(px(400))],
+      ()
+    ),
+  ]);
+
+  let avatarWrap = style([
+    display(`flex),
+    alignItems(`center),
+    justifyContent(`center),
+
+    Media.atMost(Media.Breakpoint.Phone, [
+      width(`percent(100.))
+    ])
   ]);
 
   let jobTitle = style([
     color(grey),
-    fontWeight(`semiBold)
+    fontWeight(`semiBold),
+    // marginBottom(px(8))
   ]);
 
   let mainInfo = style([
-    fontSize(px(15))
+    marginTop(px(16)),
+    fontSize(px(16)),
+
+    Media.atMost(Media.Breakpoint.Phone, [
+      padding2(~v=`zero, ~h=px(introMargin))
+    ])
+  ]);
+
+  let flex1 = style([
+    flex(`num(1.))
   ]);
 
   /*
@@ -44,7 +93,13 @@ module Style {
     alignItems(`center),
 
     selector("& > h1", [
-      marginRight(px(16))
+      marginTop(px(0)),
+      marginBottom(px(0)),
+      marginRight(px(16)),
+
+      Media.atMost(Media.Breakpoint.SmallPhone, [
+        fontSize(px(20))
+      ])
     ]),
 
     selector("& > a", [
@@ -55,8 +110,9 @@ module Style {
       
       selector("&:hover", [
         transform(translateY(px(-3)))
-      ])
+      ]),
     ]),
+
 
     selector("& > a > img", [
       margin(px(2)),
@@ -110,7 +166,7 @@ module Style {
         color(black)
       ])
     ])
-  ])
+  ]);
 };
 
 let githubIcon = [%bs.raw "require('assets/svgs/c_github.svg')"];
@@ -120,15 +176,18 @@ let linkedInIcon = [%bs.raw "require('assets/svgs/c_linkedin.svg')"];
 [@react.component]
 let make = () => 
   <div className=Style.root>
-    <div className=Style.avatar></div>
-    <div>
+    <div className=Style.flex1/>
+    <div className=Style.avatarWrap>
+      <div className=Style.avatar></div>
+    </div>
+    <div className=Style.textInfo>
       <h4 className=Style.jobTitle>
         {ReasonReact.string("Software Architect, Development Lead")}
         <br/>
         {ReasonReact.string("GeoThings Inc, Taiwan")}
       </h4>
       <div className=Style.helloBlock>
-        <h1>{ReasonReact.string("Hey, I'm Taras Vozniuk")}</h1>
+        <h1>{ReasonReact.string("Taras Vozniuk")}</h1>
         <a href="https://github.com/ambientlight"><img src=githubIcon/></a>
         <a href="https://stackoverflow.com/users/2380455/ambientlight"><img src=stackOverflowIcon/></a>
         <a href="https://www.linkedin.com/in/tarasvozniuk/"><img src=linkedInIcon/></a>
@@ -145,4 +204,5 @@ let make = () =>
         <button className=Style.ctaButton2>{ReasonReact.string("Get In Touch")}</button>
       </div>
     </div>
+    <div className=Style.flex1/>
   </div>
