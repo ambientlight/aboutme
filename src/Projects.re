@@ -17,20 +17,24 @@ module Styles {
   ]);
 
   let flexRow = style([
-    display(`flex)
-
+    display(`flex),
+    Media.atMost(Media.Breakpoint.Phone, [
+      flexWrap(`wrap)
+    ])
   ]);
 
   let detail = style([
     display(`flex),
     flexDirection(`column),
-
+    
     selector("& > *", [
-      width(px(500)),
-      height(px(280)),
+      width(`percent(100.)),
+      marginBottom(px(16)),
+    ]),
 
-      marginBottom(px(16))
-    ])
+    Media.atLeast(Media.Breakpoint.Tablet, [
+      maxWidth(`percent(66.6))
+    ]),
   ]);
 
   let description = style([
@@ -38,12 +42,14 @@ module Styles {
     border(px(2), `solid, hex("444")),
     borderRadius(px(10)),
 
-    width(px(180)),
-    marginLeft(px(24)),
-
     padding(px(24)),
     width(`percent(100.)),
-    height(`percent(100.))
+    height(`percent(100.)),
+
+    Media.atLeast(Media.Breakpoint.Tablet, [
+      marginLeft(px(24)),
+      minWidth(`percent(33.3))
+    ])
   ]);
 };
 
@@ -61,7 +67,7 @@ let make = () =>
       <div className=Styles.flexRow>
         <div className=Styles.detail>
           <div dangerouslySetInnerHTML={ 
-            "__html": "<iframe width=\"100%\" height=\"100%\" className=Styles.smt src=\"https://www.youtube.com/embed/hCDjTz-z9_U\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>" 
+            "__html": "<iframe width=\"100%\" height=\"280px\" className=Styles.smt src=\"https://www.youtube.com/embed/hCDjTz-z9_U\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>" 
           }></div>
           
           <img src=geobingan0/>

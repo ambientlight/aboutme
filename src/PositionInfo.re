@@ -6,7 +6,10 @@ module Styles {
   let positionRow = style([
     display(`flex),
     flexDirection(`row),
-
+    Media.atMost(Media.Breakpoint.Phone, [
+      flexWrap(`wrap)
+    ]),
+    
     selector("& > *", [
       margin(px(16))
     ])
@@ -33,6 +36,12 @@ module Styles {
   let mainInfo = style([
     fontSize(px(15))
   ]);
+
+  let textBlock = style([
+    Media.atMost(Media.Breakpoint.Phone, [
+      width(`percent(100.)),
+    ])
+  ]);
 };
 
 type jobInfo = {
@@ -47,7 +56,7 @@ type jobInfo = {
 let make = (~info: jobInfo) => 
   <div className=Styles.positionRow>
     <img className=Styles.entityImg src={info.imgUrl}/>
-    <div>
+    <div className=Styles.textBlock>
       <h3 className=Styles.companyName>{ReasonReact.string(info.companyName)}</h3>
       <h4 className=Styles.jobTitle>
         {ReasonReact.string([info.jobTitle, info.duration] |> Utils.List.join(~seperator=": "))}
