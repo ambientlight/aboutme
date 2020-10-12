@@ -24,7 +24,7 @@ module StackCard {
       width(px(160)),
       margin(px(8)),
 
-      backgroundColor(Css.Types.Color.hex("333")),
+      backgroundColor(hex("333")),
       border(px(2), `solid, hex("444")),
       borderRadius(px(10)),
 
@@ -253,6 +253,10 @@ let stacks: array(StackCard.info) = [|
   {
     name: "tensorflow",
     imgUrl: [%bs.raw "require('assets/imgs/tensorflow_logo.png')"]
+  },
+  {
+    name: "opencv",
+    imgUrl: [%bs.raw "require('assets/imgs/opencv_logo.png')"]
   }
 |];
 
