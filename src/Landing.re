@@ -26,5 +26,6 @@ let make = () =>
     <Intro/>
     <Stacks/>
     <Journey/>
+    <Projects/>
     <Footer/>
   </div>
