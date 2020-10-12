@@ -3,7 +3,7 @@ open Css;
 module Styles {
   let root = style([
     width(`percent(100.)),
-    paddingLeft(px(54))
+    padding2(~h=px(16), ~v=zero)
   ]);
 
   let projectTitle = style([
@@ -39,7 +39,7 @@ module Styles {
     borderRadius(px(10)),
 
     width(px(180)),
-    margin2(~v=`zero, ~h=px(24)),
+    marginLeft(px(24)),
 
     padding(px(24)),
     width(`percent(100.)),

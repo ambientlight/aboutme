@@ -3,7 +3,7 @@ open Css;
 module Styles {
   let seperatorBlock = style([
     width(`percent(100.0)),
-    paddingLeft(px(54)),
+    paddingLeft(px(16)),
 
     marginTop(px(38)),
     marginBottom(px(38)),

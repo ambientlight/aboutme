@@ -127,7 +127,7 @@ module Style {
   ]);
 
   let button = style([
-    margin(px(8)),
+    margin4(~top=px(8), ~bottom=px(8), ~right=px(16), ~left=`zero),
     padding2(~v=px(9), ~h=px(26)),
     border(px(3), `solid, grey),
     borderRadius(px(20)),

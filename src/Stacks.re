@@ -5,9 +5,9 @@ module Styles {
     display(`flex),
     flexWrap(`wrap),
     width(`percent(100.)),
-    Media.atLeast(Media.Breakpoint.Laptop, [
-      width(px(1024))
-    ]),
+    // Media.atLeast(Media.Breakpoint.Laptop, [
+    //   width(px(1024))
+    // ]),
 
     justifyContent(`center)
   ]);
@@ -51,7 +51,7 @@ module StackCard {
       card,
       style([
         width(px(96)),
-        margin(px(4)),
+        margin(px(7)),
         padding(px(8)),
         fontSize(px(14))
       ])

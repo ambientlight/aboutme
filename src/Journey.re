@@ -4,9 +4,10 @@ module Styles {
   let root = style([
     display(`flex),
     flexDirection(`column),
-    Media.atLeast(Media.Breakpoint.Laptop, [
-      width(px(1024))
-    ]),
+    
+    // Media.atLeast(Media.Breakpoint.Laptop, [
+    //   width(px(1024))
+    // ]),
   ]);
 };
 
