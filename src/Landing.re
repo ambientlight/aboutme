@@ -7,7 +7,7 @@ module Styles {
     flexDirection(`column),
 
     overflowX(Css.Types.Overflow.hidden),
-    overflowY(Css.Types.Overflow.scroll),
+    // overflowY(Css.Types.Overflow.scroll),
 
     backgroundColor(rgb(33,33,33)),
 
