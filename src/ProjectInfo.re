@@ -100,12 +100,22 @@ module Styles {
 
   let textDetail = style([
     marginTop(px(18))
-  ])
+  ]);
+
+  let doubleImageGroup = style([
+    display(`flex),
+    justifyContent(`spaceBetween)
+  ]);
+
+  let compactImage = style([
+    width(`percent(48.))
+  ]);
 };
 
 type media = 
   | Youtube(string)
   | Image(string)
+  | DoubleImage(string, string)
   | Text(string)
 
 type linkable = {
@@ -140,6 +150,11 @@ let make = (~info: projectInfo) =>
               }></div>
             | Image(url) => 
               <img src=url/>
+            | DoubleImage(url0, url1) =>
+              <div className=Styles.doubleImageGroup>
+                <img src=url0 className=Styles.compactImage/>
+                <img src=url1 className=Styles.compactImage/>
+              </div>
             | Text(text) => 
               <div className=Styles.textDetail>
                 {React.string(text)}
