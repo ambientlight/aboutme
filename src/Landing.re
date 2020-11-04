@@ -40,6 +40,8 @@ let make = () =>
       <Stacks/>
       <Journey/>
       <Projects/>
+      <Awards/>
+      <Contributions/>
     </div>
     
     <Footer/>

@@ -188,7 +188,12 @@ let make = (~info: projectInfo) =>
 
         <div className=Styles.descriptionDetail>{React.string(info.stackDescription)}</div>
 
-        <h4 className=Styles.descriptionHeader>{React.string("Stack")}</h4>
+        {
+          (Array.length(info.stackComponents) > 0) 
+          ? <h4 className=Styles.descriptionHeader>{React.string("Stack")}</h4>
+          : (<> </>)
+        }
+
         <div className=Styles.cardList>
           {
             info.stackComponents
