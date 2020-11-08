@@ -3,8 +3,8 @@ open Css;
 module Styles {
   let root = style([
     marginTop(px(40)),
-
-    height(`px(54)),
+    
+    // height(`px(69)),
     width(`percent(100.0)),
     borderTop(px(1), `solid, rgb(50, 50, 50)),
 
@@ -14,6 +14,12 @@ module Styles {
   ])
 
   let linksBlock = style([
+    display(`none),
+    marginLeft(px(20)),
+
+    Media.atLeast(Media.Breakpoint.Tablet, [
+      display(`initial)
+    ])
   ]);
 
   let footerLink = style([
@@ -31,8 +37,19 @@ module Styles {
   ]);
 
   let footerInfo = style([
-    margin(px(12)),
-    fontSize(px(15))
+    margin4(~left=px(20), ~top=px(12), ~right=px(32), ~bottom=px(12)),
+
+    fontSize(px(15)),
+    selector("& > a", [
+      color(white)
+    ])
+  ]);
+
+  let attrib = style([
+    color(grey), 
+    selector("& > a", [
+      color(grey)
+    ])
   ]);
 };
 
@@ -43,11 +60,18 @@ let make = () =>
       <a className=Styles.footerLink href="https://github.com/ambientlight">{ReasonReact.string("github")}</a>
       <a className=Styles.footerLink href="https://stackoverflow.com/users/2380455/ambientlight">{ReasonReact.string("stackoverflow")}</a>
       <a className=Styles.footerLink href="https://www.linkedin.com/in/tarasvozniuk/">{ReasonReact.string("linkedin")}</a>
+      <a className=Styles.footerLink href="mailto:primary.taras.vozniuk@gmail.com">{ReasonReact.string("contact")}</a>
     </div>
 
     <div className=Styles.footerInfo>
-      {React.string("Taras Vozniuk, made with ")}
+      <a href="mailto:primary.taras.vozniuk@gmail.com">{React.string("Taras Vozniuk")}</a>
+      {React.string(", made with ")}
       <span style={ReactDOM.Style.make(~color="#e25555", ())}>{React.string({j|❤|j})}</span>
       {React.string(" in reasonml")}
+      
+      <div className=Styles.attrib>
+        <a href="https://github.com/ambientlight/aboutme">{React.string("view on github")}</a>{React.string(", ")}
+        <a href="https://themeforest.net/user/lmpixels">{React.string("LMPixels")}</a>{React.string(" inspired design")}
+      </div>
     </div>
   </div>
