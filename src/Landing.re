@@ -1,5 +1,7 @@
 open Css;
 
+let octocat = [%bs.raw "require('assets/svgs/octocat_right.svg')"];
+
 module Styles {
   let root = style([
     display(`flex),
@@ -12,7 +14,7 @@ module Styles {
     backgroundColor(rgb(33,33,33)),
 
     fontFamily(`custom(Fonts.jost)),
-    color(white),
+    color(white)
   ]);
 
   let innerContent = style([
@@ -27,12 +29,21 @@ module Styles {
     Media.atLeast(Media.Breakpoint.Laptop, [
       width(px(900))
     ])
-  ])
+  ]);
+
+  let octocat = style([
+    position(`absolute),
+    right(`zero)
+  ]);
 };
 
 [@react.component]
 let make = () => 
   <div className=Styles.root>
+    <a className=Styles.octocat href="https://github.com/ambientlight/aboutme">
+      <img src={octocat}/>
+    </a>
+
     <Header/>
     <Intro/>
     

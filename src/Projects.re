@@ -189,7 +189,7 @@ let sixmedia: ProjectInfo.projectInfo = {
 [@react.component]
 let make = () => 
   <>
-    <Seperator title="Projects"/>
+    <Seperator navId="proj" title="Projects"/>
 
     <ProjectInfo info=geoBingAnWeb/>
     <ProjectInfo info=streetlightSurvey/>

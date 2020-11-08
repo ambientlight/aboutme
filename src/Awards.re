@@ -15,6 +15,6 @@ let beyondFutureMobility: ProjectInfo.projectInfo = {
 [@react.component]
 let make = () => 
   <>
-    <Seperator title="Awards"/>
+    <Seperator navId="awards" title="Awards"/>
     <ProjectInfo info=beyondFutureMobility/>
   </>;

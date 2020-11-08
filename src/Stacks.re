@@ -272,7 +272,7 @@ let stacks: array(StackCard.info) = [|
 [@react.component]
 let make = () => 
   <>
-    <Seperator title="Languages"/>
+    <Seperator navId="lang" title="Languages"/>
     <div className=Styles.root>
     {
       languages
@@ -280,7 +280,7 @@ let make = () =>
       |> ReasonReact.array
     }
     </div>
-    <Seperator title="Stacks"/>
+    <Seperator navId="stacks" title="Stacks"/>
     <div className=Styles.root>
     {
       stacks

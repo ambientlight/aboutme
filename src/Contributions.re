@@ -111,7 +111,7 @@ module Styles {
 [@react.component]
 let make = () => 
   <>
-    <Seperator title="Contributions"/>
+    <Seperator navId="contrib" title="Contributions"/>
     
     <div className=Styles.root>
       {

@@ -1,10 +1,12 @@
 open Css;
+open Shortener;
+open Webapi;
 
 module Styles {
   let root = style([
     display(`flex),
     alignItems(`center),
-    justifyContent(`spaceBetween),
+    // justifyContent(`spaceBetween),
 
     width(`percent(100.0)),
     padding(px(32))
@@ -63,6 +65,8 @@ module NavigationItem {
       border(`zero, `none, `currentColor),
       background(`none),
 
+      margin(px(12)),
+      
       fontSize(px(15)),
       fontFamily(`custom(Fonts.jost)),
       cursor(`pointer),
@@ -77,23 +81,46 @@ module NavigationItem {
       ])
     ])
   };
+  
+  /***
+   * similar to <a/> nav with scroll-behavior: smooth
+   */
+  let scrollIntoSeperatorView = navId => {
+    let state = Dom.History.state(Dom.history);
+    Dom.history
+    |> Dom.History.pushState(state, navId, "#" ++ navId);
+
+    Dom.document
+    |> Dom.Document.getElementById(navId)
+    |. optmap(elem => Dom.Element.scrollIntoViewWithOptions({"behavior": "smooth", "block": "start"}, elem))
+    |> ignore;
+  };
 
   [@react.component]
-  let make = (~children) => 
-    <button className=Styles.root>
+  let make = (~children, ~navId: string) => 
+    <button className=Styles.root onClick={_event => scrollIntoSeperatorView(navId)}>
       children
     </button>
 }
 
 module Navigation {
   module Styles {
+    let root = style([
+      display(`none),
+      margin4(~left=px(32), ~top=px(4), ~right=px(64), ~bottom=`zero),
 
+      Media.atLeast(Media.Breakpoint.Tablet, [display(`initial)])
+    ])
   };
 
   [@react.component]
   let make = () => 
-    <div>
-      <NavigationItem>{ReasonReact.string("About Me")}</NavigationItem>
+    <div className=Styles.root>
+      <NavigationItem navId="stacks">{ReasonReact.string("Stacks")}</NavigationItem>
+      <NavigationItem navId="journey">{ReasonReact.string("Journey")}</NavigationItem>
+      <NavigationItem navId="proj">{ReasonReact.string("Projects")}</NavigationItem>
+      <NavigationItem navId="awards">{ReasonReact.string("Awards")}</NavigationItem>
+      <NavigationItem navId="contrib">{ReasonReact.string("Contributions")}</NavigationItem>
     </div>
 };
 
