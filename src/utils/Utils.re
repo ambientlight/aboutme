@@ -6,11 +6,11 @@ module List {
 };
 
 module Array {
-  let pairwise = (arr) => {
+  let pairwise = (arr: array('a)): array(array('a)) => {
     arr
     |. Belt.Array.reduceWithIndex([||], (tar, _, idx) => 
       idx mod 2 == 0 
-        ? Array.concat([tar, Js.Array.slice(~start=idx, ~end_=idx + 2, arr)]) 
+        ? Array.concat([tar, [|Js.Array.slice(~start=idx, ~end_=idx + 2, arr)|]]) 
         : tar
     )
   };

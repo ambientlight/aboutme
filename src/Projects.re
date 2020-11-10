@@ -13,6 +13,8 @@ let ballcast3 = [%bs.raw "require('assets/screenshots/ballcast_3.png')"];
 let ami0 = [%bs.raw "require('assets/screenshots/ami_0.jpg')"];
 let ami1 = [%bs.raw "require('assets/screenshots/ami_1.jpg')"];
 let ami2 = [%bs.raw "require('assets/screenshots/ami_2.jpg')"];
+let ami3 = [%bs.raw "require('assets/screenshots/ami_3.jpg')"];
+let ami4 = [%bs.raw "require('assets/screenshots/ami_4.jpg')"];
 let ami6 = [%bs.raw "require('assets/screenshots/ami_6.png')"];
 let geobinganIOS0 = [%bs.raw "require('assets/screenshots/geobingan_ios_0.jpg')"];
 let geobinganIOS1 = [%bs.raw "require('assets/screenshots/geobingan_ios_1.jpg')"];
@@ -94,7 +96,7 @@ let ballcast: ProjectInfo.projectInfo = {
     Youtube("https://www.youtube.com/embed/0w-7xMFuAtw"),
     Youtube("https://www.youtube.com/embed/MfbruOORez0"),
     Youtube("https://www.youtube.com/embed/WZDJ8FzjDxc"),
-    Carousel([|ballcast0, ballcast1, ballcast2|], false),
+    Carousel([|ballcast1, ballcast0, ballcast2|], false),
     
     Text("
       As an avid football fan, I was curious to explore what can be done in terms of real-time data collection from live football game broadcasts. 
@@ -116,8 +118,7 @@ let ami: ProjectInfo.projectInfo = {
   title: "A-Mi Project",
   media: [|
     Youtube("https://www.youtube.com/embed/g1y87lZ0r-4"),
-    DoubleImage(ami0, ami2),
-    DoubleImage(ami1, ami6),
+    Carousel([|ami0, ami1, ami2, ami3, ami4, ami6|], true),
     Text("
       A-Mi Project was a croudfunding platform made for WorldVision Taiwan. 
       The app featured the concept of life circles - donation goals tied to WorldVision croudfunding projects that have been centered around helping vulnerable children around the globe. 
@@ -167,8 +168,7 @@ let ambientlight: ProjectInfo.projectInfo = {
 let sixmedia: ProjectInfo.projectInfo = {
   title: "6Media",
   media: [|
-    DoubleImage(sixmedia0, sixmedia1),
-    DoubleImage(sixmedia2, sixmedia3),
+    Carousel([|sixmedia0, sixmedia1, sixmedia2, sixmedia3|], true),
     Text("
       The very first app I have built. 
       6Media was designated to be an audio player built for an early iteration of the wireless speaker we were developing at that time. 
