@@ -9,6 +9,7 @@ let awsInfra = [%bs.raw "require('assets/screenshots/aws_infra.png')"];
 let ballcast0 = [%bs.raw "require('assets/screenshots/ballcast_0.png')"];
 let ballcast1 = [%bs.raw "require('assets/screenshots/ballcast_1.png')"];
 let ballcast2 = [%bs.raw "require('assets/screenshots/ballcast_2.png')"];
+let ballcast3 = [%bs.raw "require('assets/screenshots/ballcast_3.png')"];
 let ami0 = [%bs.raw "require('assets/screenshots/ami_0.jpg')"];
 let ami1 = [%bs.raw "require('assets/screenshots/ami_1.jpg')"];
 let ami2 = [%bs.raw "require('assets/screenshots/ami_2.jpg')"];
@@ -26,9 +27,7 @@ let geoBingAnWeb: ProjectInfo.projectInfo = {
   title: "GeoBingAn: Web GIS",
   media: [|
     Youtube("https://www.youtube.com/embed/hCDjTz-z9_U"),
-    Image(geobingan0),
-    Image(geobingan1),
-    Image(geobingan2),
+    Carousel([|geobingan0, geobingan1, geobingan2|], false),
     Text("
       GeoBingAn web platform is used to visualize and analyze location-aware data, which in terms of its humanitarian usecases was oriented towards natural-disasters prevention/relief activities.
       Notable applications include townwatching (field validation), evacuation planning, crisis mapping, shelter management, damage assessment and crisis mapping.
@@ -95,9 +94,8 @@ let ballcast: ProjectInfo.projectInfo = {
     Youtube("https://www.youtube.com/embed/0w-7xMFuAtw"),
     Youtube("https://www.youtube.com/embed/MfbruOORez0"),
     Youtube("https://www.youtube.com/embed/WZDJ8FzjDxc"),
-    // Image(ballcast2),
-    Image(ballcast0),
-    Image(ballcast1),
+    Carousel([|ballcast0, ballcast1, ballcast2|], false),
+    
     Text("
       As an avid football fan, I was curious to explore what can be done in terms of real-time data collection from live football game broadcasts. 
       High-speed of football game and frequently changing cameras poses decent challenges to automated data collection and makes it tricky to replace human in a wide range of use cases that involve game data collection. 
@@ -136,8 +134,7 @@ let ami: ProjectInfo.projectInfo = {
 let geobinganiOS: ProjectInfo.projectInfo = {
   title: "GeoBingAn: iOS",
   media: [|
-    DoubleImage(geobinganIOS0, geobinganIOS1),
-    DoubleImage(geobinganIOS2, geobinganIOS3),
+    Carousel([|geobinganIOS0, geobinganIOS1, geobinganIOS2, geobinganIOS3|], true),
     Text("
       GeoBingAn iOS is designated for collection of location-aware surveys, crowdsourcing reports, gps traces for geoBingAn platform and comes with offline support that is built for scenarios where connectivity may be absent for long time. 
       Survey collection in remote areas also leverages offline maps functionality. 
