@@ -1,3 +1,6 @@
+open Webapi;
+open Shortener;
+
 module Styles {
   open Css;
 
@@ -59,13 +62,17 @@ module Styles {
     borderRadius(px(8)),
     margin2(~v=zero, ~h=px(4)),
 
+    selector("&:hover", [
+      cursor(pointer)
+    ]),
+
     selector("&.white", [
       backgroundColor(white)
     ])
   ]);
 }
 
-let handleScroll = (event, indicatorCount, indicatorGroupRef: React.ref(Js.Nullable.t(Dom.element))) => {
+let handleScroll = (event, indicatorCount, indicatorGroupRef: React.ref(Js.Nullable.t(Dom.Element.t))) => {
   let elem: Webapi.Dom.HtmlElement.t = event |> ReactEvent.UI.target |> Obj.magic;
   let perc = ((elem |> Webapi.Dom.HtmlElement.scrollLeft) /. float_of_int((elem |> Webapi.Dom.HtmlElement.scrollWidth)));
   let idx = int_of_float(floor(perc *. float_of_int(indicatorCount)));
@@ -90,8 +97,15 @@ let handleScroll = (event, indicatorCount, indicatorGroupRef: React.ref(Js.Nulla
   |> ignore
 };
 
+let scrollIntoPage = (id) => {
+  Dom.document
+  |> Dom.Document.getElementById(id)
+  |. optmap(elem => Dom.Element.scrollIntoViewWithOptions({"behavior": "smooth", "block": "nearest"}, elem))
+  |> ignore;
+};
+
 [@react.component]
-let make = (~urls: array(string), ~compact: bool=false) => {
+let make = (~id: string, ~urls: array(string), ~compact: bool=false) => {
   let indicatorGroupRef = React.useRef(Js.Nullable.null);
   let indicatorCount = compact ? Array.length(Utils.Array.pairwise(urls)) : Array.length(urls);
   
@@ -100,15 +114,19 @@ let make = (~urls: array(string), ~compact: bool=false) => {
       {
         compact
         ? Utils.Array.pairwise(urls) 
-          |> Array.map(pair => 
-            <div className=Styles.doubleImageGroup>
+          |> Array.mapi((idx, pair) => {
+            let key = id ++ string_of_int(idx);
+            <div key id=key className=Styles.doubleImageGroup>
               <img className=Styles.compactImage src=pair[0]/>
               { Array.length(pair) > 1 ? <img className=Styles.compactImage src=pair[1]/> : <> </>}
             </div>
-          )
+          })
           |> ReasonReact.array
         : urls
-          |> Array.map(url => <img src=url/>)
+          |> Array.mapi((idx, url) => { 
+            let key = id ++ string_of_int(idx);
+            <img key id=key src=url/>
+          })
           |> ReasonReact.array
       }
     </div>
@@ -116,7 +134,10 @@ let make = (~urls: array(string), ~compact: bool=false) => {
     <div className=Styles.indicatorGroup ref={ReactDOM.Ref.domRef(indicatorGroupRef)}>
       {
         Belt.Array.range(0, indicatorCount - 1)
-        |> Array.map(idx => <div className={Styles.indicator ++ (idx == 0 ? " white" : "")}></div>)
+        |> Array.map(idx => {
+          let key = id ++ string_of_int(idx);
+          <div key className={Styles.indicator ++ (idx == 0 ? " white" : "")} onClick={_event => scrollIntoPage(key)}></div>
+        })
         |> ReasonReact.array
       }
     </div>

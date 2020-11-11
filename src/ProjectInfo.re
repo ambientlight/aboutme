@@ -117,7 +117,7 @@ type media =
   | Image(string)
   | DoubleImage(string, string)
   | Text(string)
-  | Carousel(array(string), bool)
+  | Carousel(string, array(string), bool)
 
 type linkable = {
   title: string,
@@ -160,8 +160,8 @@ let make = (~info: projectInfo) =>
               <div className=Styles.textDetail>
                 {React.string(text)}
               </div>
-            | Carousel(imgs, compact) => 
-              <ImageCarousel urls=imgs compact/>
+            | Carousel(id, imgs, compact) => 
+              <ImageCarousel id urls=imgs compact/>
             }
           )
           |> ReasonReact.array

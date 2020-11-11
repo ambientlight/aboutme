@@ -29,7 +29,7 @@ let geoBingAnWeb: ProjectInfo.projectInfo = {
   title: "GeoBingAn: Web GIS",
   media: [|
     Youtube("https://www.youtube.com/embed/hCDjTz-z9_U"),
-    Carousel([|geobingan0, geobingan1, geobingan2|], false),
+    Carousel("geobingan", [|geobingan0, geobingan1, geobingan2|], false),
     Text("
       GeoBingAn web platform is used to visualize and analyze location-aware data, which in terms of its humanitarian usecases was oriented towards natural-disasters prevention/relief activities.
       Notable applications include townwatching (field validation), evacuation planning, crisis mapping, shelter management, damage assessment and crisis mapping.
@@ -96,7 +96,7 @@ let ballcast: ProjectInfo.projectInfo = {
     Youtube("https://www.youtube.com/embed/0w-7xMFuAtw"),
     Youtube("https://www.youtube.com/embed/MfbruOORez0"),
     Youtube("https://www.youtube.com/embed/WZDJ8FzjDxc"),
-    Carousel([|ballcast1, ballcast0, ballcast2|], false),
+    Carousel("ballcast", [|ballcast1, ballcast0, ballcast2|], false),
     
     Text("
       As an avid football fan, I was curious to explore what can be done in terms of real-time data collection from live football game broadcasts. 
@@ -118,7 +118,7 @@ let ami: ProjectInfo.projectInfo = {
   title: "A-Mi Project",
   media: [|
     Youtube("https://www.youtube.com/embed/g1y87lZ0r-4"),
-    Carousel([|ami0, ami1, ami2, ami3, ami4, ami6|], true),
+    Carousel("ami", [|ami0, ami1, ami2, ami3, ami4, ami6|], true),
     Text("
       A-Mi Project was a croudfunding platform made for WorldVision Taiwan. 
       The app featured the concept of life circles - donation goals tied to WorldVision croudfunding projects that have been centered around helping vulnerable children around the globe. 
@@ -135,7 +135,7 @@ let ami: ProjectInfo.projectInfo = {
 let geobinganiOS: ProjectInfo.projectInfo = {
   title: "GeoBingAn: iOS",
   media: [|
-    Carousel([|geobinganIOS0, geobinganIOS1, geobinganIOS2, geobinganIOS3|], true),
+    Carousel("geoIOS", [|geobinganIOS0, geobinganIOS1, geobinganIOS2, geobinganIOS3|], true),
     Text("
       GeoBingAn iOS is designated for collection of location-aware surveys, crowdsourcing reports, gps traces for geoBingAn platform and comes with offline support that is built for scenarios where connectivity may be absent for long time. 
       Survey collection in remote areas also leverages offline maps functionality. 
@@ -168,7 +168,7 @@ let ambientlight: ProjectInfo.projectInfo = {
 let sixmedia: ProjectInfo.projectInfo = {
   title: "6Media",
   media: [|
-    Carousel([|sixmedia0, sixmedia1, sixmedia2, sixmedia3|], true),
+    Carousel("sixmedia", [|sixmedia0, sixmedia1, sixmedia2, sixmedia3|], true),
     Text("
       The very first app I have built. 
       6Media was designated to be an audio player built for an early iteration of the wireless speaker we were developing at that time. 
