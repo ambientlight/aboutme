@@ -45,8 +45,15 @@ module Styles {
     justifyContent(`spaceBetween)
   ]);
 
-  let compactImage = style([
-    width(`percent(48.))
+  let image = style([
+    cursor(pointer)
+  ]);
+
+  let compactImage = merge([
+    image, 
+    style([
+      width(`percent(48.))
+    ])
   ]);
 
   let indicatorGroup = style([
@@ -108,7 +115,8 @@ let scrollIntoPage = (id) => {
 let make = (~id: string, ~urls: array(string), ~compact: bool=false) => {
   let indicatorGroupRef = React.useRef(Js.Nullable.null);
   let indicatorCount = compact ? Array.length(Utils.Array.pairwise(urls)) : Array.length(urls);
-  
+  let (_, openImageDetail) = ImageDetail.Context.use();
+
   <>
     <div className=Styles.root onScroll={event => handleScroll(event, indicatorCount, indicatorGroupRef)}>
       {
@@ -117,15 +125,17 @@ let make = (~id: string, ~urls: array(string), ~compact: bool=false) => {
           |> Array.mapi((idx, pair) => {
             let key = id ++ string_of_int(idx);
             <div key id=key className=Styles.doubleImageGroup>
-              <img className=Styles.compactImage src=pair[0]/>
-              { Array.length(pair) > 1 ? <img className=Styles.compactImage src=pair[1]/> : <> </>}
+              <img className=Styles.compactImage src=pair[0] onClick={_event => openImageDetail(ImageDetail.Shown(urls, idx * 2))}/>
+              { Array.length(pair) > 1 
+                ? <img className=Styles.compactImage src=pair[1] onClick={_event => openImageDetail(ImageDetail.Shown(urls, idx * 2 + 1))}/> 
+                : <> </>}
             </div>
           })
           |> ReasonReact.array
         : urls
           |> Array.mapi((idx, url) => { 
             let key = id ++ string_of_int(idx);
-            <img key id=key src=url/>
+            <img className=Styles.image key id=key src=url onClick={_event => openImageDetail(ImageDetail.Shown(urls, idx))}/>
           })
           |> ReasonReact.array
       }

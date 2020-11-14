@@ -1,4 +1,6 @@
 open Css;
+open Webapi;
+open Shortener;
 
 let githubIcon = [%bs.raw "require('assets/svgs/c_github.svg')"];
 
@@ -109,7 +111,7 @@ module Styles {
 }
 
 [@react.component]
-let make = () => 
+let make = () => {
   <>
     <Seperator navId="contrib" title="Contributions"/>
     
@@ -119,5 +121,7 @@ let make = () =>
         |> Array.map(contrib => <ContributionInfo info=contrib/>)
         |> ReasonReact.array
       }
+      // {elem}
     </div>
   </>;
+}

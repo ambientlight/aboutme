@@ -38,22 +38,28 @@ module Styles {
 };
 
 [@react.component]
-let make = () => 
-  <div className=Styles.root>
-    <a className=Styles.octocat href="https://github.com/ambientlight/aboutme">
-      <img src={octocat}/>
-    </a>
+let make = () => {
+  let (imageDetail, setImageDetailState) = React.useState(_ => ImageDetail.Hidden);
+  
+  <ImageDetail.Context value=(imageDetail, state => setImageDetailState(_ => state))>
+    <div className=Styles.root>
+      <a className=Styles.octocat href="https://github.com/ambientlight/aboutme">
+        <img src={octocat}/>
+      </a>
 
-    <Header/>
-    <Intro/>
-    
-    <div className=Styles.innerContent>
-      <Stacks/>
-      <Journey/>
-      <Projects/>
-      <Awards/>
-      <Contributions/>
+      <Header/>
+      <Intro/>
+      
+      <div className=Styles.innerContent>
+        <Stacks/>
+        <Journey/>
+        <Projects/>
+        <Awards/>
+        <Contributions/>
+      </div>
+      
+      <Footer/>
+      <ImageDetail/>
     </div>
-    
-    <Footer/>
-  </div>
+  </ImageDetail.Context>
+}

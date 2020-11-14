@@ -107,9 +107,16 @@ module Styles {
     justifyContent(`spaceBetween)
   ]);
 
-  let compactImage = style([
-    width(`percent(48.))
-  ]);
+  let image = style([
+    cursor(pointer)
+  ])
+
+  let compactImage = merge([
+    image,
+    style([
+      width(`percent(48.))
+    ])
+  ])
 };
 
 type media = 
@@ -135,7 +142,9 @@ type projectInfo = {
 };
 
 [@react.component]
-let make = (~info: projectInfo) => 
+let make = (~info: projectInfo) => {
+  let (_, openImageDetail) = ImageDetail.Context.use();
+
   <div className=Styles.root>
     <h2 className=Styles.projectTitle>{React.string(info.title)}</h2>
 
@@ -150,11 +159,11 @@ let make = (~info: projectInfo) =>
                 "__html": "<iframe width=\"100%\" height=\"280px\" className=Styles.smt src=\"" ++ url ++ "\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>" 
               }></div>
             | Image(url) => 
-              <img src=url/>
+              <img className=Styles.image src=url onClick={_ => openImageDetail(Shown([|url|], 0))}/>
             | DoubleImage(url0, url1) =>
               <div className=Styles.doubleImageGroup>
-                <img src=url0 className=Styles.compactImage/>
-                <img src=url1 className=Styles.compactImage/>
+                <img src=url0 className=Styles.compactImage onClick={_ => openImageDetail(Shown([|url0|], 0))}/>
+                <img src=url1 className=Styles.compactImage onClick={_ => openImageDetail(Shown([|url1|], 1))}/>
               </div>
             | Text(text) => 
               <div className=Styles.textDetail>
@@ -207,5 +216,5 @@ let make = (~info: projectInfo) =>
       </div>
 
     </div>
-
-  </div>;
+  </div>
+}
