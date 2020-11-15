@@ -40,7 +40,7 @@ module Style {
     margin(px(introMargin)),
 
     border(px(16), `solid, rgb(65, 65, 65)),
-    backgroundImage(url([%bs.raw "require('assets/imgs/avatar.png')"])),
+    backgroundImage(url(Data.avatar)),
     backgroundSize(`contain),
 
     ...Media.define(
@@ -169,10 +169,6 @@ module Style {
   ]);
 };
 
-let githubIcon = [%bs.raw "require('assets/svgs/c_github.svg')"];
-let stackOverflowIcon = [%bs.raw "require('assets/svgs/c_stackoverflow.svg')"];
-let linkedInIcon = [%bs.raw "require('assets/svgs/c_linkedin.svg')"];
-
 [@react.component]
 let make = () => 
   <div className=Style.root>
@@ -182,26 +178,22 @@ let make = () =>
     </div>
     <div className=Style.textInfo>
       <h4 className=Style.jobTitle>
-        {ReasonReact.string("Software Architect, Development Lead")}
+        {React.string(Data.jobTitle)}
         <br/>
-        {ReasonReact.string("GeoThings Inc, Taiwan")}
+        {React.string(Data.companyTitle)}
       </h4>
       <div className=Style.helloBlock>
-        <h1>{ReasonReact.string("Taras Vozniuk")}</h1>
-        <a href="https://github.com/ambientlight"><img src=githubIcon/></a>
-        <a href="https://stackoverflow.com/users/2380455/ambientlight"><img src=stackOverflowIcon/></a>
-        <a href="https://www.linkedin.com/in/tarasvozniuk/"><img src=linkedInIcon/></a>
+        <h1>{React.string(Data.fullName)}</h1>
+        <a href=Data.githubHref><img src=Icons.cGithub/></a>
+        <a href=Data.soHref><img src=Icons.cStackOverflow/></a>
+        <a href=Data.linkedInHref><img src=Icons.cLinkedIn/></a>
       </div>
       <section className=Style.mainInfo>
-        {ReasonReact.string("
-          My work has been greatly cross-functional up to this point.
-          After starting as an iOS Developer, I have been involved in full-stack development, cloud architecture, deep-learning among other things. 
-          I lead development at GeoThings Inc. My open-source contribution is primarily centered around redux and ReasonML(ReScript) ecosystem. 
-        ")}
+        {React.string(Data.intro)}
       </section>
       <div className=Style.ctaButtonsBlock>
-        <button className=Style.ctaButton>{ReasonReact.string("Download CV")}</button>
-        <button className=Style.ctaButton2>{ReasonReact.string("Get In Touch")}</button>
+        <button className=Style.ctaButton>{React.string("Download CV")}</button>
+        <button className=Style.ctaButton2>{React.string("Get In Touch")}</button>
       </div>
     </div>
     <div className=Style.flex1/>

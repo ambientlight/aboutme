@@ -50,10 +50,10 @@ module Logo {
   [@react.component]
   let make = () => 
     <div className=Styles.root>
-      <div className=Styles.circle>{ReasonReact.string("T")}</div>
+      <div className=Styles.circle>{React.string("T")}</div>
       <div className=Styles.title>
-        <span className=Styles.firstName>{ReasonReact.string("Taras ")}</span>
-        {ReasonReact.string("Vozniuk")}
+        <span className=Styles.firstName>{React.string("Taras ")}</span>
+        {React.string("Vozniuk")}
       </div>
     </div>
 };
@@ -116,11 +116,11 @@ module Navigation {
   [@react.component]
   let make = () => 
     <div className=Styles.root>
-      <NavigationItem navId="stacks">{ReasonReact.string("Stacks")}</NavigationItem>
-      <NavigationItem navId="journey">{ReasonReact.string("Journey")}</NavigationItem>
-      <NavigationItem navId="proj">{ReasonReact.string("Projects")}</NavigationItem>
-      <NavigationItem navId="awards">{ReasonReact.string("Awards")}</NavigationItem>
-      <NavigationItem navId="contrib">{ReasonReact.string("Contributions")}</NavigationItem>
+      <NavigationItem navId="stacks">{React.string(Data.stacksTitle)}</NavigationItem>
+      <NavigationItem navId="journey">{React.string(Data.journeyTitle)}</NavigationItem>
+      <NavigationItem navId="proj">{React.string(Data.projectsTitle)}</NavigationItem>
+      <NavigationItem navId="awards">{React.string(Data.awardsTitle)}</NavigationItem>
+      <NavigationItem navId="contrib">{React.string(Data.contribsTitle)}</NavigationItem>
     </div>
 };
 

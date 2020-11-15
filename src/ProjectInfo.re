@@ -1,10 +1,6 @@
 
 open Css;
 
-let teamIcon = [%bs.raw "require('assets/svgs/people_alt-white.svg')"];
-let linkIcon = [%bs.raw "require('assets/svgs/link-white.svg')"];
-let todayIcon = [%bs.raw "require('assets/svgs/today-white.svg')"];
-
 module Styles {
   let root = style([
     width(`percent(100.)),
@@ -173,7 +169,7 @@ let make = (~info: projectInfo) => {
               <ImageCarousel id urls=imgs compact/>
             }
           )
-          |> ReasonReact.array
+          |> React.array
         }
       </div>
 
@@ -183,18 +179,18 @@ let make = (~info: projectInfo) => {
         <div className=Styles.iconBlock>
           <div className=Styles.iconDetail>{ 
             switch(info.team){
-            | Some(team) => (<> <img src=teamIcon/>{React.string(team.title)}</>)
+            | Some(team) => (<> <img src=Icons.team/>{React.string(team.title)}</>)
             | None => (<> </>)
             }
           } </div>
           <div className=Styles.iconDetail>{ 
             switch(info.href){
-            | Some(href) => (<> <img src=linkIcon/>{React.string(href.title)}</>)
+            | Some(href) => (<> <img src=Icons.link/>{React.string(href.title)}</>)
             | None => (<> </>)
             }
           } </div>
           <div className=Styles.iconDetail>
-            <img src=todayIcon/>{React.string(info.duration)}
+            <img src=Icons.today/>{React.string(info.duration)}
           </div>
         </div>
 
@@ -210,7 +206,7 @@ let make = (~info: projectInfo) => {
           {
             info.stackComponents
             |> Array.map(comp => <div className=Styles.stackCard>{React.string(comp)}</div>)
-            |> ReasonReact.array
+            |> React.array
           }
         </div>
       </div>

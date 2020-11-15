@@ -52,14 +52,12 @@ module Styles {
   ]);
 };
 
-let link = [%bs.raw "require('assets/svgs/link-gray-24.svg')"];
-
 [@react.component]
 let make = (~title, ~navId) =>
   <div id=navId className=Styles.root>
-    <a href={"#" ++ navId} className=Styles.seperatorLink>
+    <a href={j|#$navId|j} className=Styles.seperatorLink>
       {React.string(title)}
-      <img className=Styles.link src=link/>
+      <img className=Styles.link src=Icons.linkGray/>
     </a>
 
     <div className=Styles.seperator>

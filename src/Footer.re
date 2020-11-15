@@ -57,14 +57,15 @@ module Styles {
 let make = () => 
   <div className=Styles.root>
     <div className=Styles.linksBlock>
-      <a className=Styles.footerLink href="https://github.com/ambientlight">{ReasonReact.string("github")}</a>
-      <a className=Styles.footerLink href="https://stackoverflow.com/users/2380455/ambientlight">{ReasonReact.string("stackoverflow")}</a>
-      <a className=Styles.footerLink href="https://www.linkedin.com/in/tarasvozniuk/">{ReasonReact.string("linkedin")}</a>
-      <a className=Styles.footerLink href="mailto:primary.taras.vozniuk@gmail.com">{ReasonReact.string("contact")}</a>
+      {
+        Data.footerLinks
+        |> Array.mapi((idx, (href, title)) => <a key={j|fl$idx|j} className=Styles.footerLink href>{React.string(title)}</a>)
+        |> React.array
+      }
     </div>
 
     <div className=Styles.footerInfo>
-      <a href="mailto:primary.taras.vozniuk@gmail.com">{React.string("Taras Vozniuk")}</a>
+      <a href=Data.mailHref>{React.string(Data.fullName)}</a>
       {React.string(", made with ")}
       <span style={ReactDOM.Style.make(~color="#e25555", ())}>{React.string({j|❤|j})}</span>
       {React.string(" in reasonml")}

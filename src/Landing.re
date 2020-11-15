@@ -1,7 +1,5 @@
 open Css;
 
-let octocat = [%bs.raw "require('assets/svgs/octocat_right.svg')"];
-
 module Styles {
   let root = style([
     display(`flex),
@@ -44,7 +42,7 @@ let make = () => {
   <ImageDetail.Context value=(imageDetail, state => setImageDetailState(_ => state))>
     <div className=Styles.root>
       <a className=Styles.octocat href="https://github.com/ambientlight/aboutme">
-        <img src={octocat}/>
+        <img src={Icons.octocatRight}/>
       </a>
 
       <Header/>

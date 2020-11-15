@@ -131,13 +131,13 @@ let make = (~id: string, ~urls: array(string), ~compact: bool=false) => {
                 : <> </>}
             </div>
           })
-          |> ReasonReact.array
+          |> React.array
         : urls
           |> Array.mapi((idx, url) => { 
             let key = id ++ string_of_int(idx);
             <img className=Styles.image key id=key src=url onClick={_event => openImageDetail(ImageDetail.Shown(urls, idx))}/>
           })
-          |> ReasonReact.array
+          |> React.array
       }
     </div>
     
@@ -148,7 +148,7 @@ let make = (~id: string, ~urls: array(string), ~compact: bool=false) => {
           let key = id ++ string_of_int(idx);
           <div key className={Styles.indicator ++ (idx == 0 ? " white" : "")} onClick={_event => scrollIntoPage(key)}></div>
         })
-        |> ReasonReact.array
+        |> React.array
       }
     </div>
   </>;

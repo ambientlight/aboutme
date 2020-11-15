@@ -2,10 +2,6 @@ open Css;
 open Shortener;
 open Webapi;
 
-let close = [%bs.raw "require('assets/svgs/close-white-18dp.svg')"];
-let back = [%bs.raw "require('assets/svgs/arrow_back-white-18dp.svg')"];
-let forward = [%bs.raw "require('assets/svgs/arrow_forward-white-18dp.svg')"];
-
 type state = 
   | Hidden 
   | Shown(array(string), int);
@@ -88,9 +84,6 @@ module WithBackdrop {
     |. optfmap(doc => doc |> Dom.HtmlDocument.body)
     |. optfmap(body => body |> Dom.Element.asHtmlElement);
 
-  let geobingan1 = [%bs.raw "require('assets/screenshots/geobingan_1.png')"];
-  let awsInfra = [%bs.raw "require('assets/screenshots/aws_infra.png')"];
-
   [@react.component]
   let make = (~url, ~didClose, ~onLeft, ~onRight, ~noLeftRight) => {
     React.useEffect0(() => {
@@ -131,13 +124,13 @@ module WithBackdrop {
 
       <div className=Styles.bottomPanel>
         <button className=Styles.button onClick=didClose>
-          <img src=close/>
+          <img src=Icons.close/>
         </button>
         <button hidden=noLeftRight className=Styles.button onClick=onRight>
-          <img src=forward/>
+          <img src=Icons.forward/>
         </button>
         <button hidden=noLeftRight className=Styles.button onClick=onLeft>
-          <img src=back/>
+          <img src=Icons.back/>
         </button>
       </div>
       

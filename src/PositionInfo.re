@@ -1,7 +1,5 @@
 open Css;
 
-let geothingsLogo = [%bs.raw "require('assets/imgs/geothings_logo.png')"];
-
 module Styles {
   let positionRow = style([
     display(`flex),
@@ -57,17 +55,17 @@ let make = (~info: jobInfo) =>
   <div className=Styles.positionRow>
     <img className=Styles.entityImg src={info.imgUrl}/>
     <div className=Styles.textBlock>
-      <h3 className=Styles.companyName>{ReasonReact.string(info.companyName)}</h3>
+      <h3 className=Styles.companyName>{React.string(info.companyName)}</h3>
       <h4 className=Styles.jobTitle>
-        {ReasonReact.string([info.jobTitle, info.duration] |> Utils.List.join(~seperator=": "))}
+        {React.string([info.jobTitle, info.duration] |> Utils.List.join(~seperator=": "))}
       </h4>
       <section className=Styles.mainInfo>
         {
           info.description 
           |> String.split_on_char('\n')
-          |. Belt.List.mapWithIndex((idx, str) => <p key={string_of_int(idx)}>{ReasonReact.string(str)}</p>)
+          |. Belt.List.mapWithIndex((idx, str) => <p key={string_of_int(idx)}>{React.string(str)}</p>)
           |> Array.of_list
-          |> ReasonReact.array
+          |> React.array
         }
       </section>
     </div>
