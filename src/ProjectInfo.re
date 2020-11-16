@@ -4,17 +4,17 @@ open Css;
 module Styles {
   let root = style([
     width(`percent(100.)),
-    padding2(~h=px(16), ~v=zero)
+    padding2(~h=SDefs.primaryPadding, ~v=zero)
   ]);
 
   let projectTitle = style([
     fontWeight(`medium),
-    fontSize(px(26))
+    fontSize(SDefs.projectTitleFontSize)
   ]);
 
   let iframeContainer = style([
-    width(px(500)),
-    height(px(350))
+    width(SDefs.iFrameContainerWidth),
+    height(SDefs.iFrameContainerHeight)
   ]);
 
   let flexRow = style([
@@ -30,7 +30,7 @@ module Styles {
     
     selector("& > *", [
       width(`percent(100.)),
-      marginBottom(px(16)),
+      marginBottom(SDefs.projectDetailMarginBottom),
     ]),
 
     Media.atLeast(Media.Breakpoint.Tablet, [
@@ -39,22 +39,22 @@ module Styles {
   ]);
 
   let description = style([
-    backgroundColor(hex("333")),
-    border(px(2), `solid, hex("444")),
-    borderRadius(px(10)),
+    backgroundColor(SDefs.projectDescriptionBackgrounColor),
+    border(SDefs.projectDescriptionBorderWidth, `solid, SDefs.projectDescriptionBorderColor),
+    borderRadius(SDefs.projectDescriptionBorderRadius),
 
-    padding(px(24)),
+    padding(SDefs.projectDescriptionPadding),
     width(`percent(100.)),
     height(`percent(100.)),
 
     Media.atLeast(Media.Breakpoint.Tablet, [
-      marginLeft(px(24)),
+      marginLeft(SDefs.projectDescriptionMarginLeft),
       minWidth(`percent(33.3))
     ])
   ]);
 
   let descriptionHeader = style([
-    margin4(~bottom=px(16), ~top=zero, ~right=zero, ~left=zero)
+    margin4(~bottom=SDefs.projectDescriptionHeaderMarginBottom, ~top=zero, ~right=zero, ~left=zero)
   ]);
 
   let iconDetail = style([
@@ -62,13 +62,13 @@ module Styles {
     alignItems(`center),
 
     selector("& > img", [
-      width(px(16)),
-      height(px(16)),
-      marginRight(px(12))
+      width(SDefs.projectDescriptionIconSize),
+      height(SDefs.projectDescriptionIconSize),
+      marginRight(SDefs.projectDescriptionIconMarginRight)
     ]),
 
-    fontSize(px(15)),
-    marginBottom(px(4))
+    fontSize(SDefs.projectDescriptionIconDetailFontSize),
+    marginBottom(SDefs.projectDescriptionIconDetailMarginBottom)
   ]);
 
   let iconBlock = style([
@@ -76,8 +76,8 @@ module Styles {
   ]);
 
   let descriptionDetail = style([
-    fontSize(px(14)),
-    margin2(~v=px(16), ~h=zero)
+    fontSize(SDefs.projectDescriptionDetailFontSize),
+    margin2(~v=SDefs.projectDescriptionDetailVMargin, ~h=zero)
   ]);
 
   let cardList = style([
@@ -95,7 +95,7 @@ module Styles {
   ]);
 
   let textDetail = style([
-    marginTop(px(18))
+    marginTop(SDefs.projectTextDetailMarginTop)
   ]);
 
   let doubleImageGroup = style([

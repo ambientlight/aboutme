@@ -9,16 +9,16 @@ module Styles {
     ]),
     
     selector("& > *", [
-      margin(px(16))
+      margin(SDefs.journeyItemMargin)
     ])
   ]);
 
   let entityImg = style([
-    width(px(200)),
-    height(px(200)),
-    borderRadius(px(30)),
+    width(SDefs.journeyItemImgSize),
+    height(SDefs.journeyItemImgSize),
+    borderRadius(SDefs.journeyItemImgBorderRadius),
     backgroundColor(white),
-    padding(px(20))
+    padding(SDefs.journeyItemPadding)
   ]);
 
   let companyName = style([
@@ -32,7 +32,7 @@ module Styles {
   ]);
 
   let mainInfo = style([
-    fontSize(px(15))
+    fontSize(SDefs.journeyItemContentFontSize)
   ]);
 
   let textBlock = style([

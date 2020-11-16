@@ -3,14 +3,13 @@ open Css;
 module Styles {
   let root = style([
     width(`percent(100.0)),
-    paddingLeft(px(16)),
+    paddingLeft(SDefs.primaryPadding),
 
-    marginTop(px(38)),
-    marginBottom(px(38)),
-
+    margin2(~h=zero, ~v=SDefs.seperatorVMargin),
+    
     fontWeight(`medium),
     
-    fontSize(px(30))
+    fontSize(SDefs.seperatorFontSize)
   ]);
 
   let seperatorLink = style([
@@ -32,22 +31,22 @@ module Styles {
   ]);
 
   let sepBlue = style([
-    width(px(32)),
-    height(px(4)),
+    width(SDefs.seperatorUndescorePrimaryWidth),
+    height(SDefs.seperatorUndescorePrimaryHeight),
 
-    backgroundColor(blue)
+    backgroundColor(SDefs.primaryColor)
   ]);
 
   let sepGrey = style([
-    width(px(128)),
-    height(px(4)),
+    width(SDefs.seperatorUndescoreGrayWidth),
+    height(SDefs.seperatorUndescoreGrayHeight),
     
-    backgroundColor(rgb(50, 50, 50))
+    backgroundColor(SDefs.seperatorUndescoreGrayColor)
   ]);
 
   let link = style([
     display(none),
-    paddingLeft(px(4)),
+    paddingLeft(SDefs.seperatorLinkPaddingLeft),
     verticalAlign(`middle)
   ]);
 };

@@ -1,20 +1,23 @@
-open Css;
 open Shortener;
 open Webapi;
 
 module Styles {
+  open Css;
+
   let root = style([
     display(`flex),
     alignItems(`center),
     // justifyContent(`spaceBetween),
 
     width(`percent(100.0)),
-    padding(px(32))
+    padding(px(SDefs.primaryPaddingPx * 2))
   ]);
 };
 
 module Logo {
   module Styles {
+    open Css;
+
     let root = style([
       display(`flex),
       alignItems(`center),
@@ -27,19 +30,19 @@ module Logo {
       alignItems(`center),
       justifyContent(`center),
 
-      width(px(50)),
-      height(px(50)),
+      width(SDefs.nameSignSize),
+      height(SDefs.nameSignSize),
       borderRadius(`percent(50.)),
 
-      backgroundColor(blue),
+      backgroundColor(SDefs.primaryColor),
       fontFamily(`custom(Fonts.jost)),
       fontWeight(`bold),
-      fontSize(`px(32)),
+      fontSize(SDefs.nameSignFontSize),
     ]);
     
     let title = style([
-      margin2(~h=`px(12), ~v=`zero),
-      fontSize(`px(18)),
+      margin2(~h=SDefs.nameHMargin, ~v=`zero),
+      fontSize(SDefs.nameFontSize),
     ]);
 
     let firstName = style([
@@ -48,26 +51,33 @@ module Logo {
   };
 
   [@react.component]
-  let make = () => 
+  let make = () => {
+    let comp = Js.String.split(" ", Data.fullName);
+
     <div className=Styles.root>
-      <div className=Styles.circle>{React.string("T")}</div>
+      <div className=Styles.circle>
+      {React.string(String.length(Data.fullName) > 0 ? String.make(1, String.get(Data.fullName, 0)) : "")}
+      </div>
       <div className=Styles.title>
-        <span className=Styles.firstName>{React.string("Taras ")}</span>
-        {React.string("Vozniuk")}
+        <span className=Styles.firstName>{React.string(comp[0] ++ " ")}</span>
+        {React.string(Array.length(comp) > 0 ? comp[Array.length(comp) - 1] : "")}
       </div>
     </div>
+  }
 };
 
 module NavigationItem {
   module Styles {
+    open Css;
+
     let root = style([
       padding(`zero),
       border(`zero, `none, `currentColor),
       background(`none),
 
-      margin(px(12)),
+      margin(SDefs.navItemMargin),
       
-      fontSize(px(15)),
+      fontSize(SDefs.navItemFontSize),
       fontFamily(`custom(Fonts.jost)),
       cursor(`pointer),
       color(white),
@@ -105,9 +115,11 @@ module NavigationItem {
 
 module Navigation {
   module Styles {
+    open Css;
+    
     let root = style([
       display(`none),
-      margin4(~left=px(32), ~top=px(4), ~right=px(64), ~bottom=`zero),
+      margin4(~left=SDefs.navMarginLeft, ~top=SDefs.navMarginTop, ~right=SDefs.navMarginRight, ~bottom=SDefs.navMarginBottom),
 
       Media.atLeast(Media.Breakpoint.Tablet, [display(`initial)])
     ])

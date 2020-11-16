@@ -3,7 +3,7 @@ open Css;
 module Styles {
   let root = style([
     width(`percent(100.)),
-    padding2(~h=px(16), ~v=zero)
+    padding2(~h=SDefs.primaryPadding, ~v=zero)
   ]);
 }
 

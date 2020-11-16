@@ -11,45 +11,45 @@ module Styles {
     flexDirection(`column),
     alignItems(`center),
 
-    width(px(160)),
-    margin(px(8)),
+    width(SDefs.sCardWidth),
+    margin(SDefs.sCardMargin),
 
-    backgroundColor(hex("333")),
-    border(px(2), `solid, hex("444")),
-    borderRadius(px(10)),
+    backgroundColor(SDefs.sCardBackgrounColor),
+    border(SDefs.sCardBorderWidth, `solid, SDefs.sCardBorderColor),
+    borderRadius(SDefs.sCardBorderRadius),
 
     fontWeight(`medium),
-    padding(px(16)),
+    padding(SDefs.sCardPadding),
 
     selector("&:hover", [
-      transform(translateY(px(-4)))
+      transform(SDefs.sCardHoverTransform)
     ])
   ]);
 
   let cardImg = style([
-    width(px(64)),
-    height(px(64)),
-    borderRadius(px(8)),
-    marginBottom(px(8))
+    width(SDefs.sCardImgSize),
+    height(SDefs.sCardImgSize),
+    borderRadius(SDefs.sCardImgBorderRadius),
+    marginBottom(SDefs.sCardBottomMargin)
   ]);
 
   let cardCompact = merge([
     card,
     style([
-      width(px(96)),
-      margin(px(7)),
-      padding(px(8)),
-      fontSize(px(14))
+      width(SDefs.sCompactCardWidth),
+      margin(SDefs.sCompactCardMargin),
+      padding(SDefs.sCompactCardPadding),
+      fontSize(SDefs.sCompactCardFontSize)
     ])
   ])
 
   let cardImgCompact = merge([
     cardImg,
     style([
-      width(px(32)),
-      height(px(32)),
-      borderRadius(px(8)),
-      marginBottom(px(4))
+      width(SDefs.sCompactCardImgSize),
+      height(SDefs.sCompactCardImgSize),
+      borderRadius(SDefs.sCompactCardImgBorderRadius),
+      marginBottom(SDefs.sCompactCardBottomMargin)
     ])
   ])
 };

@@ -5,10 +5,6 @@ module Styles {
     display(`flex),
     flexWrap(`wrap),
     width(`percent(100.)),
-    // Media.atLeast(Media.Breakpoint.Laptop, [
-    //   width(px(1024))
-    // ]),
-
     justifyContent(`center)
   ]);
 };

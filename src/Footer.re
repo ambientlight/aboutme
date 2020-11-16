@@ -2,11 +2,11 @@ open Css;
 
 module Styles {
   let root = style([
-    marginTop(px(40)),
+    marginTop(SDefs.footerMarginTop),
     
     // height(`px(69)),
     width(`percent(100.0)),
-    borderTop(px(1), `solid, rgb(50, 50, 50)),
+    borderTop(SDefs.footerBorderWidth, `solid, SDefs.footerBorderColor),
 
     display(`flex),
     alignItems(center),
@@ -15,7 +15,7 @@ module Styles {
 
   let linksBlock = style([
     display(`none),
-    marginLeft(px(20)),
+    marginLeft(SDefs.footerLinksMarginLeft),
 
     Media.atLeast(Media.Breakpoint.Tablet, [
       display(`initial)
@@ -23,9 +23,9 @@ module Styles {
   ]);
 
   let footerLink = style([
-    color(grey),
+    color(SDefs.footerLinkColor),
     textDecoration(`none),
-    padding(px(12)),
+    padding(SDefs.footerLinkPadding),
 
     selector("&:hover, &:visited, &:link, &:active", [
       textDecoration(`none)
@@ -37,9 +37,9 @@ module Styles {
   ]);
 
   let footerInfo = style([
-    margin4(~left=px(20), ~top=px(12), ~right=px(32), ~bottom=px(12)),
+    margin4(~left=SDefs.footerInfoLeftPadding, ~top=SDefs.footerInfoVPadding, ~right=SDefs.footerInfoRightPadding, ~bottom=SDefs.footerInfoVPadding),
 
-    fontSize(px(15)),
+    fontSize(SDefs.footerInfoFontSize),
     selector("& > a", [
       color(white)
     ])

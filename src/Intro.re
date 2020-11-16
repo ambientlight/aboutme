@@ -7,8 +7,8 @@ module Style {
     alignItems(`center),
   ]);
 
-  // compensate absense of design grid by making sure text and avatar left and right empty space allign
-  let introMargin = 32
+  // compensate absense of actuaal grid by making sure text and avatar left and right empty space allign
+  let introMargin = SDefs.primaryPaddingPx * 2;
 
   let textInfo = style([
     display(`flex),
@@ -25,10 +25,10 @@ module Style {
       paddingRight(px(introMargin))
     ]),
     Media.atLeast(Media.Breakpoint.Laptop, [
-      width(px(400))
+      width(SDefs.introTextMaxBaseWidth)
     ]),
     Media.atLeast(Media.Breakpoint.Desktop, [
-      width(px(600))
+      width(pxFloat(float_of_int(SDefs.introTextMaxBaseWidthPx) *. 1.5))
     ])
   ]);
 
@@ -39,17 +39,11 @@ module Style {
     borderRadius(`percent(50.)),
     margin(px(introMargin)),
 
-    border(px(16), `solid, rgb(65, 65, 65)),
+    border(SDefs.avatarBorderWidth, `solid, SDefs.baseGray),
     backgroundImage(url(Data.avatar)),
     backgroundSize(`contain),
 
-    ...Media.define(
-      ~smallPhone=[width(px(200)), height(px(200))],
-      ~phone=[width(px(250)), height(px(250))],
-      ~tablet=[width(px(300)), height(px(300))],
-      ~default=[width(px(400)), height(px(400))],
-      ()
-    ),
+    ...SDefs.avatarSizes,
   ]);
 
   let avatarWrap = style([
@@ -64,13 +58,12 @@ module Style {
 
   let jobTitle = style([
     color(grey),
-    fontWeight(`semiBold),
-    // marginBottom(px(8))
+    fontWeight(`semiBold)
   ]);
 
   let mainInfo = style([
-    marginTop(px(16)),
-    fontSize(px(16)),
+    marginTop(SDefs.introMarginTop),
+    fontSize(SDefs.introFontSize),
 
     Media.atMost(Media.Breakpoint.Phone, [
       padding2(~v=`zero, ~h=px(introMargin))
@@ -109,31 +102,31 @@ module Style {
       //animation(moveInBottom, ~duration=500, ~timingFunction=Types.TimingFunction.easeOut, ~delay=750),
       
       selector("&:hover", [
-        transform(translateY(px(-3)))
+        transform(SDefs.helloLinkHoverTransform)
       ]),
     ]),
 
-
     selector("& > a > img", [
-      margin(px(2)),
+      margin(SDefs.helloLinkMargin),
       
-      width(px(30)),
-      height(px(30)),
+      width(SDefs.helloLinkImgSize),
+      height(SDefs.helloLinkImgSize),
     ])
   ]);
 
   let ctaButtonsBlock = style([
-    margin2(~v=px(20), ~h=px(0))
+    margin2(~v=SDefs.ctaBlockVMargin, ~h=SDefs.ctaBlockHMargin)
   ]);
 
   let button = style([
-    margin4(~top=px(8), ~bottom=px(8), ~right=px(16), ~left=`zero),
-    padding2(~v=px(9), ~h=px(26)),
-    border(px(3), `solid, grey),
-    borderRadius(px(20)),
-    background(rgb(51, 51, 51)),
+    margin4(~top=SDefs.ctaButtonVMargin, ~bottom=SDefs.ctaButtonVMargin, ~right=SDefs.ctaButtonRightMargin, ~left=SDefs.ctaButtonLeftMargin),
+    padding2(~v=SDefs.ctaButtonVPadding, ~h=SDefs.ctaButtonHPadding),
+
+    border(SDefs.ctaButtonBorderWidth, `solid, SDefs.selectionGray),
+    borderRadius(SDefs.ctaButtonBorderRadius),
+    background(SDefs.buttonBgGray),
     
-    fontSize(px(15)),
+    fontSize(SDefs.ctaButtonFontSize),
     fontFamily(`custom(Fonts.jost)),
     cursor(`pointer),
     color(white),
@@ -143,17 +136,17 @@ module Style {
     ]),
 
     selector("&:active", [
-      color(darkgrey)
+      color(SDefs.selectionGray)
     ])
   ]);
 
   let ctaButton = merge([
     button,
     style([
-      borderColor(blue),
+      borderColor(SDefs.primaryColor),
 
       selector("&:hover", [
-        backgroundColor(blue)
+        backgroundColor(SDefs.primaryColor)
       ])
     ])
   ])
@@ -162,7 +155,7 @@ module Style {
     button,
     style([
       selector("&:hover", [
-        backgroundColor(grey),
+        backgroundColor(SDefs.selectionGray),
         color(black)
       ])
     ])

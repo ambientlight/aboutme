@@ -1,6 +1,6 @@
-open Css;
-
 module Styles {
+  open Css;
+
   let root = style([
     display(`flex),
     alignItems(`center),
@@ -9,7 +9,7 @@ module Styles {
     overflowX(Css.Types.Overflow.hidden),
     // overflowY(Css.Types.Overflow.scroll),
 
-    backgroundColor(rgb(33,33,33)),
+    backgroundColor(SDefs.backgroundColor),
 
     fontFamily(`custom(Fonts.jost)),
     color(white)
@@ -22,10 +22,10 @@ module Styles {
     width(`percent(100.0)),
 
     Media.exactly(Media.Breakpoint.Tablet, [
-      padding2(~v=`zero, ~h=px(16))
+      padding2(~v=`zero, ~h=SDefs.primaryPadding)
     ]),
     Media.atLeast(Media.Breakpoint.Laptop, [
-      width(px(900))
+      width(SDefs.maxContextWidth)
     ])
   ]);
 

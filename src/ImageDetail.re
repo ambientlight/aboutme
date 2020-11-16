@@ -33,7 +33,7 @@ module WithBackdrop {
       left(`zero),
       bottom(`zero),
       right(`zero),
-      backgroundColor(rgba(0, 0, 0, 0.9)),
+      backgroundColor(SDefs.imageDetailBackdropBgColor),
       zIndex(1)
     ]);
 
@@ -50,10 +50,10 @@ module WithBackdrop {
       border(`zero, `none, `currentColor),
       background(`none),
 
-      padding2(~h=px(24), ~v=px(16)),
+      padding2(~h=SDefs.imageDetailButtonHPadding, ~v=SDefs.imageDetailButtonVPadding),
       
       cursor(`pointer),
-      backgroundColor(rgba(0, 0, 0, 0.3)),
+      backgroundColor(SDefs.imageDetailButtonBgColor),
       
       selector("&:focus", [
         outline(`zero, `none, `currentColor)
@@ -64,8 +64,8 @@ module WithBackdrop {
       ]),
 
       selector("& > img", [
-        width(px(32)),
-        height(px(32))
+        width(SDefs.imageDetailButtonIconSize),
+        height(SDefs.imageDetailButtonIconSize)
       ])
     ]);
 
