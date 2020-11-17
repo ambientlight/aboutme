@@ -2,7 +2,8 @@ open Css;
 
 type info = {
   name: string,
-  imgUrl: string
+  imgUrl: string,
+  href: string
 };
 
 module Styles {
@@ -20,6 +21,12 @@ module Styles {
 
     fontWeight(`medium),
     padding(SDefs.sCardPadding),
+
+    color(white),
+
+    selector("&:hover, &:visited, &:link, &:active", [
+      textDecoration(`none)
+    ]),
 
     selector("&:hover", [
       transform(SDefs.sCardHoverTransform)
@@ -56,7 +63,7 @@ module Styles {
 
 [@react.component]
 let make = (~info: info, ~isCompact: bool=false) => 
-  <div className={isCompact ? Styles.cardCompact : Styles.card}>
+  <a target="_blank" href=info.href className={isCompact ? Styles.cardCompact : Styles.card}>
     <img className={isCompact ? Styles.cardImgCompact : Styles.cardImg} src=info.imgUrl/>
     {React.string(info.name)}
-  </div>;
+  </a>;

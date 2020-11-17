@@ -301,148 +301,183 @@ let projects: array(ProjectInfo.projectInfo) = [|
 let languages: array(StackCard.info) = [|
   {
     name: "typescript",
-    imgUrl: [%bs.raw "require('assets/imgs/typescript_logo.jpg')"]
+    imgUrl: [%bs.raw "require('assets/imgs/typescript_logo.jpg')"],
+    href: "https://stackshare.io/typescript"
   },
   {
     name: "javascript",
-    imgUrl: [%bs.raw "require('assets/imgs/javascript_logo.jpg')"]
+    imgUrl: [%bs.raw "require('assets/imgs/javascript_logo.jpg')"],
+    href: "https://stackshare.io/javascript"
   },
   {
     name: "reasonml(rescript)",
-    imgUrl: [%bs.raw "require('assets/imgs/reasonml_logo.jpg')"]
+    imgUrl: [%bs.raw "require('assets/imgs/reasonml_logo.jpg')"],
+    href: "https://stackshare.io/reasonml"
   },
   {
     name: "python",
-    imgUrl: [%bs.raw "require('assets/imgs/python_logo.png')"]
+    imgUrl: [%bs.raw "require('assets/imgs/python_logo.png')"],
+    href: "https://stackshare.io/python"
   },
   {
     name: "swift",
-    imgUrl: [%bs.raw "require('assets/imgs/swift_logo.png')"]
+    imgUrl: [%bs.raw "require('assets/imgs/swift_logo.png')"],
+    href: "https://stackshare.io/swift"
   },
   {
     name: "java",
-    imgUrl: [%bs.raw "require('assets/imgs/java_logo.png')"]
+    imgUrl: [%bs.raw "require('assets/imgs/java_logo.png')"],
+    href: "https://stackshare.io/java"
   },
   { 
     name: "kotlin",
-    imgUrl: [%bs.raw "require('assets/imgs/kotlin_logo.png')"]
+    imgUrl: [%bs.raw "require('assets/imgs/kotlin_logo.png')"],
+    href: "https://stackshare.io/kotlin"
   },
   {
     name: "ocaml",
-    imgUrl: [%bs.raw "require('assets/imgs/ocaml_logo.jpg')"]
+    imgUrl: [%bs.raw "require('assets/imgs/ocaml_logo.jpg')"],
+    href: "https://stackshare.io/ocaml"
   },
   {
     name: "objective-c",
-    imgUrl: [%bs.raw "require('assets/imgs/objc_logo.png')"]
+    imgUrl: [%bs.raw "require('assets/imgs/objc_logo.png')"],
+    href: "https://stackshare.io/objective-c"
   },
   { 
     name: "c/c++",
-    imgUrl: [%bs.raw "require('assets/imgs/cpp_logo.png')"]
+    imgUrl: [%bs.raw "require('assets/imgs/cpp_logo.png')"],
+    href: "https://stackshare.io/cplusplus"
   }
 |]; 
 
 let stacks: array(StackCard.info) = [|
   { 
     name: "react",
-    imgUrl: [%bs.raw "require('assets/imgs/react_logo.png')"]
+    imgUrl: [%bs.raw "require('assets/imgs/react_logo.png')"],
+    href: "https://stackshare.io/react"
   },
   {
     name: "angular",
-    imgUrl: [%bs.raw "require('assets/imgs/angular_logo.jpg')"]
+    imgUrl: [%bs.raw "require('assets/imgs/angular_logo.jpg')"],
+    href: "https://stackshare.io/angular"
   },
   {
     name: "react-native",
-    imgUrl: [%bs.raw "require('assets/imgs/reactnative_logo.jpg')"]
+    imgUrl: [%bs.raw "require('assets/imgs/reactnative_logo.jpg')"],
+    href: "https://stackshare.io/react-native"
   },
   {
     name: "django",
-    imgUrl: [%bs.raw "require('assets/imgs/django_logo.png')"]
+    imgUrl: [%bs.raw "require('assets/imgs/django_logo.png')"],
+    href: "https://stackshare.io/django"
   },
   {
     name: "aws amplify",
-    imgUrl: [%bs.raw "require('assets/imgs/awsamplify_logo.png')"]
+    imgUrl: [%bs.raw "require('assets/imgs/awsamplify_logo.png')"],
+    href: "https://stackshare.io/aws-amplify"
   },
   {
     name: "serverless",
-    imgUrl: [%bs.raw "require('assets/imgs/serverless_logo.png')"]
+    imgUrl: [%bs.raw "require('assets/imgs/serverless_logo.png')"],
+    href: "https://stackshare.io/serverless"
   },
   {
     name: "aws lambda",
-    imgUrl: [%bs.raw "require('assets/imgs/awslambda_logo.png')"]
+    imgUrl: [%bs.raw "require('assets/imgs/awslambda_logo.png')"],
+    href: "https://stackshare.io/aws-lambda"
   },
   {
     name: "cloudformation",
-    imgUrl: [%bs.raw "require('assets/imgs/awscloudformation_logo.png')"]
+    imgUrl: [%bs.raw "require('assets/imgs/awscloudformation_logo.png')"],
+    href: "https://stackshare.io/aws-cloudformation"
   },
   {
     name: "docker",
-    imgUrl: [%bs.raw "require('assets/imgs/docker_logo.png')"]
+    imgUrl: [%bs.raw "require('assets/imgs/docker_logo.png')"],
+    href: "https://stackshare.io/docker"
   },
   {
     name: "aws ecs",
-    imgUrl: [%bs.raw "require('assets/imgs/awsecs_logo.png')"]
+    imgUrl: [%bs.raw "require('assets/imgs/awsecs_logo.png')"],
+    href: "https://stackshare.io/amazon-ec2-container-service"
+  },
+  {
+    name: "kubernetes",
+    imgUrl: [%bs.raw "require('assets/imgs/kubernetes_logo.png')"],
+    href: "https://stackshare.io/kubernetes"
   },
   /*
   {
-    name: "kubernetes",
-    imgUrl: [%bs.raw "require('assets/imgs/kubernetes_logo.png')"]
+    name: "apache",
+    imgUrl: [%bs.raw "require('assets/imgs/apache_logo.jpg')"],
+    href: "https://stackshare.io/apache"
   },
   */
   {
-    name: "apache",
-    imgUrl: [%bs.raw "require('assets/imgs/apache_logo.jpg')"]
-  },
-  {
     name: "postgresql",
-    imgUrl: [%bs.raw "require('assets/imgs/postgresql_logo.png')"]
+    imgUrl: [%bs.raw "require('assets/imgs/postgresql_logo.png')"],
+    href: "https://stackshare.io/postgresql"
   },
   {
     name: "dynamodb",
-    imgUrl: [%bs.raw "require('assets/imgs/awsdynamodb_logo.png')"]
+    imgUrl: [%bs.raw "require('assets/imgs/awsdynamodb_logo.png')"],
+    href: "https://stackshare.io/amazon-dynamodb"
   },
   {
     name: "sqlite",
-    imgUrl: [%bs.raw "require('assets/imgs/sqlite_logo.jpg')"]
+    imgUrl: [%bs.raw "require('assets/imgs/sqlite_logo.jpg')"],
+    href: "https://stackshare.io/sqlite"
   },
   {
     name: "neo4j",
-    imgUrl: [%bs.raw "require('assets/imgs/neo4j_logo.png')"]
+    imgUrl: [%bs.raw "require('assets/imgs/neo4j_logo.png')"],
+    href: "https://stackshare.io/neo4j"
   },
   {
     name: "redis",
-    imgUrl: [%bs.raw "require('assets/imgs/redis_logo.png')"]
+    imgUrl: [%bs.raw "require('assets/imgs/redis_logo.png')"],
+    href: "https://stackshare.io/redis"
   },
   { 
     name: "realm",
-    imgUrl: [%bs.raw "require('assets/imgs/realm_logo.png')"]
+    imgUrl: [%bs.raw "require('assets/imgs/realm_logo.png')"],
+    href: "https://stackshare.io/realm"
   },
   {
     name: "redux",
-    imgUrl: [%bs.raw "require('assets/imgs/redux_logo.png')"]
+    imgUrl: [%bs.raw "require('assets/imgs/redux_logo.png')"],
+    href: "https://stackshare.io/redux"
   },
   {
     name: "rxjs",
-    imgUrl: [%bs.raw "require('assets/imgs/rxjs_logo.png')"]
+    imgUrl: [%bs.raw "require('assets/imgs/rxjs_logo.png')"],
+    href: "https://stackshare.io/rxjs"
   },
   {
     name: "graphql",
-    imgUrl: [%bs.raw "require('assets/imgs/graphql_logo.png')"]
+    imgUrl: [%bs.raw "require('assets/imgs/graphql_logo.png')"],
+    href: "https://stackshare.io/graphql"
   },
   {
     name: "logux",
-    imgUrl: [%bs.raw "require('assets/svgs/logux_logo.svg')"]
+    imgUrl: [%bs.raw "require('assets/svgs/logux_logo.svg')"],
+    href: "https://logux.io/"
   },
   {
     name: "pixijs",
-    imgUrl: [%bs.raw "require('assets/imgs/pixijs_logo.png')"]
+    imgUrl: [%bs.raw "require('assets/imgs/pixijs_logo.png')"],
+    href: "https://www.pixijs.com/"
   },
   {
     name: "jest",
-    imgUrl: [%bs.raw "require('assets/imgs/jest_logo.png')"]
+    imgUrl: [%bs.raw "require('assets/imgs/jest_logo.png')"],
+    href: "https://stackshare.io/jest"
   },
   {
     name: "selenium",
-    imgUrl: [%bs.raw "require('assets/imgs/selenium_logo.jpg')"]
+    imgUrl: [%bs.raw "require('assets/imgs/selenium_logo.jpg')"],
+    href: "https://stackshare.io/selenium"
   },
   /*
   {
@@ -452,34 +487,42 @@ let stacks: array(StackCard.info) = [|
   */
   {
     name: "mapboxgl",
-    imgUrl: [%bs.raw "require('assets/imgs/mapboxgl_logo.png')"]
+    imgUrl: [%bs.raw "require('assets/imgs/mapboxgl_logo.png')"],
+    href: "https://stackshare.io/mapbox"
   },
   {
     name: "webpack",
-    imgUrl: [%bs.raw "require('assets/imgs/webpack_logo.png')"]
+    imgUrl: [%bs.raw "require('assets/imgs/webpack_logo.png')"],
+    href: "https://stackshare.io/webpack"
   },
   {
     name: "fastlane",
-    imgUrl: [%bs.raw "require('assets/imgs/fastlane_logo.png')"]
+    imgUrl: [%bs.raw "require('assets/imgs/fastlane_logo.png')"],
+    href: "https://stackshare.io/fastlane"
   },
   {
     name: "bitrise",
-    imgUrl: [%bs.raw "require('assets/imgs/bitrise_logo.jpg')"]
+    imgUrl: [%bs.raw "require('assets/imgs/bitrise_logo.jpg')"],
+    href: "https://stackshare.io/bitrise"
   },
   {
     name: "githubactions",
-    imgUrl: [%bs.raw "require('assets/imgs/githubactions_logo.png')"]
+    imgUrl: [%bs.raw "require('assets/imgs/githubactions_logo.png')"],
+    href: "https://stackshare.io/github-actions"
   },
   {
     name: "keras",
-    imgUrl: [%bs.raw "require('assets/imgs/keras_logo.png')"]
+    imgUrl: [%bs.raw "require('assets/imgs/keras_logo.png')"],
+    href: "https://stackshare.io/keras"
   },
   {
     name: "tensorflow",
-    imgUrl: [%bs.raw "require('assets/imgs/tensorflow_logo.png')"]
+    imgUrl: [%bs.raw "require('assets/imgs/tensorflow_logo.png')"],
+    href: "https://stackshare.io/tensorflow"
   },
   {
     name: "opencv",
-    imgUrl: [%bs.raw "require('assets/imgs/opencv_logo.png')"]
+    imgUrl: [%bs.raw "require('assets/imgs/opencv_logo.png')"],
+    href: "https://stackshare.io/opencv"
   }
 |];
