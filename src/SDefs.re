@@ -129,3 +129,11 @@ let imageDetailButtonHPadding = px(24);
 let imageDetailButtonVPadding = px(16);
 let imageDetailButtonBgColor = rgba(0, 0, 0, 0.3);
 let imageDetailButtonIconSize = px(32);
+
+let imageCarouselScrollbarHeight = px(0);
+let imageCarouselScrollbarBorderRadius = px(0);
+let imageCarouselItemBorderRadius = px(4);
+let imageCarouselItemMarginRight = `percent(2.);
+let imageCarouselIndicatorSize = px(16);
+let imageCarouselIndicatorBorderRadius = px(8);
+let imageCarouselHMargin = px(4);

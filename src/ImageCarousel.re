@@ -15,13 +15,12 @@ module Styles {
     unsafe("-webkit-overflow-scrolling", "touch"),
 
     selector("&::-webkit-scrollbar", [
-      width(px(5)),
-      height(px(0))
+      height(SDefs.imageCarouselScrollbarHeight)
     ]),
 
     selector("&::-webkit-scrollbar-thumb", [
       backgroundColor(white),
-      borderRadius(px(5))
+      borderRadius(SDefs.imageCarouselScrollbarBorderRadius)
     ]),
 
     selector("&::-webkit-scrollbar-track", [
@@ -32,8 +31,8 @@ module Styles {
       unsafe("scroll-snap-align", "start"),
       flexShrink(0.),
       width(`percent(100.)),
-      marginRight(`percent(2.)),
-      borderRadius(px(4)),
+      marginRight(SDefs.imageCarouselItemMarginRight),
+      borderRadius(SDefs.imageCarouselItemBorderRadius),
       
       display(`flex),
       alignItems(`center)
@@ -64,10 +63,10 @@ module Styles {
 
   let indicator = style([
     backgroundColor(grey),
-    width(px(16)),
-    height(px(16)),
-    borderRadius(px(8)),
-    margin2(~v=zero, ~h=px(4)),
+    width(SDefs.imageCarouselIndicatorSize),
+    height(SDefs.imageCarouselIndicatorSize),
+    borderRadius(SDefs.imageCarouselIndicatorBorderRadius),
+    margin2(~v=zero, ~h=SDefs.imageCarouselHMargin),
 
     selector("&:hover", [
       cursor(pointer)
@@ -123,7 +122,7 @@ let make = (~id: string, ~urls: array(string), ~compact: bool=false) => {
         compact
         ? Utils.Array.pairwise(urls) 
           |> Array.mapi((idx, pair) => {
-            let key = id ++ string_of_int(idx);
+            let key = {j|$id$idx|j};
             <div key id=key className=Styles.doubleImageGroup>
               <img className=Styles.compactImage src=pair[0] onClick={_event => openImageDetail(ImageDetail.Shown(urls, idx * 2))}/>
               { Array.length(pair) > 1 
@@ -134,7 +133,7 @@ let make = (~id: string, ~urls: array(string), ~compact: bool=false) => {
           |> React.array
         : urls
           |> Array.mapi((idx, url) => { 
-            let key = id ++ string_of_int(idx);
+            let key = {j|$id$idx|j};
             <img className=Styles.image key id=key src=url onClick={_event => openImageDetail(ImageDetail.Shown(urls, idx))}/>
           })
           |> React.array
@@ -145,7 +144,7 @@ let make = (~id: string, ~urls: array(string), ~compact: bool=false) => {
       {
         Belt.Array.range(0, indicatorCount - 1)
         |> Array.map(idx => {
-          let key = id ++ string_of_int(idx);
+          let key = {j|$id$idx|j};
           <div key className={Styles.indicator ++ (idx == 0 ? " white" : "")} onClick={_event => scrollIntoPage(key)}></div>
         })
         |> React.array
