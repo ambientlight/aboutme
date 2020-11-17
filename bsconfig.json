@@ -18,9 +18,7 @@
     "bs-webapi",
     "bs-css",
     "bs-css-emotion",
-    "reason-react",
-    "reductive",
-    "reductive-dev-tools"
+    "reason-react"
   ],
   "bs-dev-dependencies": [
   ],

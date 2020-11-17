@@ -43,11 +43,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-hot-loader": "4.12.18",
-    "reason-react": "^0.9.1",
-    "reductive": "git+https://github.com/reasonml-community/reductive",
-    "reductive-dev-tools": "^3.0.0",
-    "redux": "^4.0.5",
-    "redux-devtools-extension": "^2.13.8"
+    "reason-react": "^0.9.1"
   },
   "babel": {
     "presets": [
