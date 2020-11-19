@@ -31,6 +31,6 @@ jobs:
       with:
         ACCESS_TOKEN: ${{ secrets.GH_PAGES_TOKEN }}
         BASE_BRANCH: master
-        BRANCH: master
+        BRANCH: main
         FOLDER: dist
         REPOSITORY_NAME: ambientlight/ambientlight.github.io
