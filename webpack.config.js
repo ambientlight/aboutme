@@ -51,7 +51,9 @@ const config = (env, ifProduction, ifNotProduction) => ({
 			loader: 'url-loader', 
 			options: {
 				limit: 8192,
-				fallback: 'file-loader'
+				fallback: 'file-loader',
+				publicPath: "/assets",
+      			outputPath: "assets"
 			}
 		}}]
 	},
