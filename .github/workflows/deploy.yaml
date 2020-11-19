@@ -33,4 +33,4 @@ jobs:
         BASE_BRANCH: master
         BRANCH: master
         FOLDER: dist
-        REPOSITORY_NAME: ambientlight.github.io
+        REPOSITORY_NAME: ambientlight/ambientlight.github.io
