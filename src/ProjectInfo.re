@@ -1,5 +1,6 @@
 
 open Css;
+open Operators;
 
 module Styles {
   let root = style([
@@ -61,7 +62,20 @@ module Styles {
     display(`flex),
     alignItems(`center),
 
-    selector("& > img", [
+    selector("& > a", [
+      display(`flex),
+      alignItems(`center),
+      
+      color(white),
+      selector("&:visited, &:link, &:active", [
+        textDecoration(`none)
+      ]),
+      selector("&:hover", [
+        textDecoration(`underline)
+      ])
+    ]),
+
+    selector("img", [
       width(SDefs.projectDescriptionIconSize),
       height(SDefs.projectDescriptionIconSize),
       marginRight(SDefs.projectDescriptionIconMarginRight)
@@ -179,13 +193,13 @@ let make = (~info: projectInfo) => {
         <div className=Styles.iconBlock>
           <div className=Styles.iconDetail>{ 
             switch(info.team){
-            | Some(team) => (<> <img src=Icons.team/>{React.string(team.title)}</>)
+            | Some(team) => (<a href={team.href |? ""}><img src=Icons.team/>{React.string(team.title)}</a>)
             | None => (<> </>)
             }
           } </div>
           <div className=Styles.iconDetail>{ 
             switch(info.href){
-            | Some(href) => (<> <img src=Icons.link/>{React.string(href.title)}</>)
+            | Some(href) => (<a href={href.href |? ""}><img src=Icons.link/>{React.string(href.title)}</a>)
             | None => (<> </>)
             }
           } </div>

@@ -22,7 +22,17 @@ module Styles {
   ]);
 
   let companyName = style([
-    margin(`zero)
+    margin(`zero),
+
+    selector("& > a", [
+      color(white),
+      selector("&:visited, &:link, &:active", [
+        textDecoration(`none)
+      ]),
+      selector("&:hover", [
+        textDecoration(`underline)
+      ])
+    ])
   ]);
 
   let jobTitle = style([
@@ -47,15 +57,18 @@ type jobInfo = {
   jobTitle: string,
   duration: string,
   imgUrl: string,
-  description: string
+  description: string,
+  href: string
 };
 
 [@react.component]
 let make = (~info: jobInfo) => 
   <div className=Styles.positionRow>
-    <img className=Styles.entityImg src={info.imgUrl}/>
+    <a href=info.href>
+      <img className=Styles.entityImg src={info.imgUrl}/>
+    </a>
     <div className=Styles.textBlock>
-      <h3 className=Styles.companyName>{React.string(info.companyName)}</h3>
+      <h3 className=Styles.companyName><a href=info.href>{React.string(info.companyName)}</a></h3>
       <h4 className=Styles.jobTitle>
         {React.string([info.jobTitle, info.duration] |> Utils.List.join(~seperator=": "))}
       </h4>

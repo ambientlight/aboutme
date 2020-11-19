@@ -131,6 +131,10 @@ module Style {
     cursor(`pointer),
     color(white),
 
+    selector("&:hover, &:visited, &:link, &:active", [
+      textDecoration(`none)
+    ]),
+
     selector("&:focus", [
       outline(`zero, `none, `currentColor)
     ]),
@@ -182,11 +186,12 @@ let make = () =>
         <a href=Data.linkedInHref><img src=Icons.cLinkedIn/></a>
       </div>
       <section className=Style.mainInfo>
+      
         {React.string(Data.intro)}
       </section>
       <div className=Style.ctaButtonsBlock>
-        <button className=Style.ctaButton>{React.string("Download CV")}</button>
-        <button className=Style.ctaButton2>{React.string("Get In Touch")}</button>
+        <button className=Style.ctaButton onClick=(_ev => { Webapi.Dom.window |> Webapi.Dom.Window.print})>{React.string("Download CV")}</button>
+        <a className=Style.ctaButton2 href=Data.mailHref>{React.string("Get In Touch")}</a>
       </div>
     </div>
     <div className=Style.flex1/>

@@ -98,6 +98,7 @@ let journey: array(PositionInfo.jobInfo) = [|
     jobTitle: "Software Architect, Development Lead",
     duration: "since July 2015",
     imgUrl: [%bs.raw "require('assets/imgs/geothings_logo.png')"],
+    href: "https://geothings.tw/",
     description: 
       "I have joined GeoThings as our mission with social impact got me really bought in to the idea. " ++
       "I started as an iOS developer working on OSM map-oriented application. " ++ 
@@ -114,6 +115,7 @@ let journey: array(PositionInfo.jobInfo) = [|
     jobTitle: "iOS Developer",
     duration: "May 2013 - September 2014",
     imgUrl: [%bs.raw "require('assets/imgs/sixnology.png')"],
+    href: "https://www.sixnology.com/",
     description: 
       "Really grateful for the given opportunity at such a young age, " ++ 
       "I've joined in my junior year and was tasked with building a iOS player that would stream audio to a DLNA-compliant speaker we were developing. " ++ 
@@ -125,6 +127,7 @@ let journey: array(PositionInfo.jobInfo) = [|
     jobTitle: "BS Computer Science, BS Finance and Information Management",
     duration: "earned in June 2015",
     imgUrl: [%bs.raw "require('assets/imgs/NCTU_emblem.png')"],
+    href: "https://www.nctu.edu.tw/",
     description: 
       "Fortunate to come and study in Taiwan, I have to give great credit to NCTU for who I am now. Development career was my ultimate goal, but as I was also curious to explore stock trading, I decided to get a double degree. "
   }
@@ -368,6 +371,11 @@ let stacks: array(StackCard.info) = [|
     href: "https://stackshare.io/react-native"
   },
   {
+    name: "electron",
+    imgUrl: [%bs.raw "require('assets/imgs/electron_logo.jpg')"],
+    href: "https://stackshare.io/electron"
+  },
+  {
     name: "django",
     imgUrl: [%bs.raw "require('assets/imgs/django_logo.png')"],
     href: "https://stackshare.io/django"
@@ -484,12 +492,12 @@ let stacks: array(StackCard.info) = [|
     name: "threejs",
     imgUrl: [%bs.raw "require('assets/imgs/threejs_logo.jpg')"]
   },
-  */
   {
     name: "mapboxgl",
     imgUrl: [%bs.raw "require('assets/imgs/mapboxgl_logo.png')"],
     href: "https://stackshare.io/mapbox"
   },
+  */
   {
     name: "webpack",
     imgUrl: [%bs.raw "require('assets/imgs/webpack_logo.png')"],
