@@ -23,7 +23,7 @@ let navMarginTop = px(4);
 let navMarginRight = px(64);
 let navMarginBottom = zero;
 
-let introTextMaxBaseWidthPx = 400;
+let introTextMaxBaseWidthPx = 500;
 let introTextMaxBaseWidth = px(introTextMaxBaseWidthPx);
 let introFontSize = px(16);
 let introMarginTop = px(16);
@@ -33,6 +33,7 @@ let avatarSizes = Media.define(
   ~smallPhone=[width(px(200)), height(px(200))],
   ~phone=[width(px(250)), height(px(250))],
   ~tablet=[width(px(300)), height(px(300))],
+  ~laptop=[width(px(350)), height(px(350))],
   ~default=[width(px(400)), height(px(400))],
   ()
 );

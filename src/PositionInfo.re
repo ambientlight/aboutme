@@ -50,6 +50,12 @@ module Styles {
       width(`percent(100.)),
     ])
   ]);
+
+  let positionImgAnchor = style([
+    Media.atMost(Media.Breakpoint.Phone, [
+      margin(`auto)
+    ])
+  ]);
 };
 
 type jobInfo = {
@@ -64,7 +70,7 @@ type jobInfo = {
 [@react.component]
 let make = (~info: jobInfo) => 
   <div className=Styles.positionRow>
-    <a href=info.href>
+    <a className=Styles.positionImgAnchor href=info.href>
       <img className=Styles.entityImg src={info.imgUrl}/>
     </a>
     <div className=Styles.textBlock>

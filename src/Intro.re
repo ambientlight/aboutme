@@ -28,7 +28,7 @@ module Style {
       width(SDefs.introTextMaxBaseWidth)
     ]),
     Media.atLeast(Media.Breakpoint.Desktop, [
-      width(pxFloat(float_of_int(SDefs.introTextMaxBaseWidthPx) *. 1.5))
+      width(pxFloat(float_of_int(SDefs.introTextMaxBaseWidthPx) *. 1.2))
     ])
   ]);
 
