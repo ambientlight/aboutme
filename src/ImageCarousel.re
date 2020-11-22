@@ -34,12 +34,13 @@ module Styles {
       marginRight(SDefs.imageCarouselItemMarginRight),
       borderRadius(SDefs.imageCarouselItemBorderRadius),
       
+      objectFit(`contain),
       display(`flex),
       alignItems(`center)
     ])
   ]);
 
-  let doubleImageGroup = style([
+  let imageGroup = style([
     display(`flex),
     justifyContent(`spaceBetween)
   ]);
@@ -52,6 +53,13 @@ module Styles {
     image, 
     style([
       width(`percent(48.))
+    ])
+  ]);
+
+  let fullImage = merge([
+    image, 
+    style([
+      width(`percent(100.))
     ])
   ]);
 
@@ -123,7 +131,7 @@ let make = (~id: string, ~urls: array(string), ~compact: bool=false) => {
         ? Utils.Array.pairwise(urls) 
           |> Array.mapi((idx, pair) => {
             let key = {j|$id$idx|j};
-            <div key id=key className=Styles.doubleImageGroup>
+            <div key id=key className=Styles.imageGroup>
               <img className=Styles.compactImage src=pair[0] onClick={_event => openImageDetail(ImageDetail.Shown(urls, idx * 2))}/>
               { Array.length(pair) > 1 
                 ? <img className=Styles.compactImage src=pair[1] onClick={_event => openImageDetail(ImageDetail.Shown(urls, idx * 2 + 1))}/> 
@@ -134,7 +142,9 @@ let make = (~id: string, ~urls: array(string), ~compact: bool=false) => {
         : urls
           |> Array.mapi((idx, url) => { 
             let key = {j|$id$idx|j};
-            <img className=Styles.image key id=key src=url onClick={_event => openImageDetail(ImageDetail.Shown(urls, idx))}/>
+            <div key id=key className=Styles.imageGroup>
+              <img className=Styles.fullImage src=url onClick={_event => openImageDetail(ImageDetail.Shown(urls, idx))}/>
+            </div>
           })
           |> React.array
       }
