@@ -29,6 +29,7 @@ let introFontSize = px(16);
 let introMarginTop = px(16);
 
 let avatarBorderWidth = px(16);
+let avatarBorderWidthPhone = px(10);
 let avatarSizes = Media.define(
   ~smallPhone=[width(px(200)), height(px(200))],
   ~phone=[width(px(250)), height(px(250))],

@@ -40,6 +40,10 @@ module Style {
     margin(px(introMargin)),
 
     border(SDefs.avatarBorderWidth, `solid, SDefs.baseGray),
+    Media.atMost(Media.Breakpoint.Phone, [
+      borderWidth(SDefs.avatarBorderWidthPhone)
+    ]),
+
     backgroundImage(url(Data.avatar)),
     backgroundSize(`contain),
 
