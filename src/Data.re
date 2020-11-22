@@ -7,7 +7,7 @@ let companyTitle = "GeoThings Inc, Taiwan";
 let intro = "
   My work has been greatly cross-functional up to this point.
   After starting as an iOS Developer, I have been involved in full-stack development, cloud architecture, deep-learning among other things. 
-  I lead development at GeoThings Inc. My open-source contribution is primarily centered around redux and ReasonML(ReScript) ecosystem. 
+  I am a lead developer at GeoThings Inc. My open-source contribution is primarily centered around redux and ReasonML(ReScript) ecosystem. 
 ";
 
 let githubHref = "https://github.com/ambientlight";
@@ -106,7 +106,7 @@ let journey: array(PositionInfo.jobInfo) = [|
       "so I quickly became involved in our other areas: map servers, front-end, some android. " ++
       "Since fall 2017 my focus was shifted towards full stack development and cloud architecture which would account for most of my development time. " ++
       "Second part of 2019 was an exception which I spend building a deep learning pipeline capable of extracting streetlights locations from windshield camera videos. " ++
-      "As of now (September 2020), I am working on RDF-oriented graph backend on-premise deployment for our B2B partner.
+      "Most recently I am involved in building a scalable distributed data pipeline on Kubernetes for processing Civil IoT Taiwan data.  
     
       Without overstatement, it has thus far been a roller coaster ride for our team, we've worked hard, pivoted a few times, but it is an incredible experience nonetheless."
   },
