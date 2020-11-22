@@ -199,7 +199,7 @@ let make = () =>
       <div className=Style.ctaButtonsBlock>
         <button className=Style.ctaButton onClick=(_ev => 
           Webapi.Dom.window 
-          |> Webapi.Dom.Window.open_(~url="https://github.com/ambientlight", ~name="", ~features="_blank") 
+          |> Webapi.Dom.Window.open_(~url=Data.githubHref, ~name="", ~features="_blank") 
           |> ignore
         )>
           {React.string("Follow on Github")}

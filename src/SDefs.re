@@ -1,6 +1,6 @@
 open Css;
 
-let primaryColor = blue;
+let primaryColor = orangered;
 let baseGray = rgb(65, 65, 65);
 let buttonBgGray = hex("333");
 let borderGray = hex("444");
