@@ -118,7 +118,7 @@ module WithBackdrop {
     });
 
     <div className=Styles.root>
-      <div className=Styles.imageContext>
+      <div className=Styles.imageContext onClick=didClose>
         <img src=url/>
       </div>
 

@@ -278,6 +278,23 @@ let projects: array(ProjectInfo.projectInfo) = [|
   },
 
   {
+    title: "Ambientlight",
+    media: [|
+      Youtube("https://www.youtube.com/embed/wBriMhGLYWQ"),
+      Text("
+        Our idea for beyond future mobile workshop held by MIT Media Labs & NCTU involved crafting a personal flying assistant that is safe to operate in indoor environment, swapping quad-copter with helium airship was our approach for that, also potentially unlocking longer flight durations then those offered by conventional quad-copters. 
+        The project got us Best Potential Team Award. 
+      ")
+    |],
+    duration: "Summer 2015",
+    team: Some({ title: "Team Ambientlight", href: None }),
+    href: None,
+    stackDescription: "Helium-powered drone(airship) with arduino which communicates with iOS app via bluetooth. IOS app is used as a remote which can also send the accelerometer and bearing data to allow drone to follow the person with the phone.",
+    stackComponents: [|"arduino", "ios", "ble4.0"|]
+  },
+
+  /*
+  {
     title: "6Media",
     media: [|
       Carousel("sixmedia", [|
@@ -299,6 +316,7 @@ let projects: array(ProjectInfo.projectInfo) = [|
     stackDescription: "Native iOS objective-c app with data persistence via CoreData. Supports UPnP/DLNA audio streaming and features Spotify integration.",
     stackComponents: [|"ios", "upnp/dlna", "objective-c"|]
   }
+  */
 |];
 
 let languages: array(StackCard.info) = [|
