@@ -22,6 +22,7 @@ module Styles {
   ]);
 
   let companyName = style([
+    fontFamily(`custom(Fonts.montserrat)),
     margin(`zero),
 
     selector("& > a", [
@@ -38,7 +39,7 @@ module Styles {
   let jobTitle = style([
     marginTop(`zero),
     color(grey),
-    fontWeight(`semiBold)
+    fontWeight(`normal),
   ]);
 
   let mainInfo = style([

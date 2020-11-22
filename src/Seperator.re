@@ -7,8 +7,8 @@ module Styles {
 
     margin2(~h=zero, ~v=SDefs.seperatorVMargin),
     
-    fontWeight(`medium),
-    
+    // fontWeight(`medium),
+    fontFamily(`custom(Fonts.montserrat)),
     fontSize(SDefs.seperatorFontSize)
   ]);
 

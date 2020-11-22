@@ -58,12 +58,17 @@ module Style {
 
   let jobTitle = style([
     color(grey),
-    fontWeight(`semiBold)
+    fontWeight(`semiBold),
+
+    fontFamily(`custom(Fonts.montserrat)),
+    // fontWeight(`light)
   ]);
 
   let mainInfo = style([
     marginTop(SDefs.introMarginTop),
     fontSize(SDefs.introFontSize),
+    fontFamily(`custom(Fonts.jost)),
+    // fontWeight(`light),
 
     Media.atMost(Media.Breakpoint.Phone, [
       padding2(~v=`zero, ~h=px(introMargin))
@@ -84,11 +89,13 @@ module Style {
   let helloBlock = style([
     display(`flex),
     alignItems(`center),
-
+    fontFamily(`custom(Fonts.montserrat)),
+    
     selector("& > h1", [
       marginTop(px(0)),
       marginBottom(px(0)),
       marginRight(px(16)),
+      fontWeight(`semiBold),
 
       Media.atMost(Media.Breakpoint.SmallPhone, [
         fontSize(px(20))
