@@ -55,6 +55,14 @@ const config = (env, ifProduction, ifNotProduction) => ({
 				publicPath: "/assets",
       			outputPath: "assets"
 			}
+		}},
+		// rename any jpg to jpeg to make sure it is part of the main bundle when needed
+		{ test: /\.(jpeg)$/, use: { 
+			loader: 'url-loader', 
+			options: {
+				publicPath: "/assets",
+      			outputPath: "assets"
+			}
 		}}]
 	},
 	plugins: removeEmpty([

@@ -1,4 +1,4 @@
-let avatar = [%bs.raw "require('assets/imgs/avatar.jpg')"];
+let avatar = [%bs.raw "require('assets/imgs/avatar.jpeg')"];
 let fullName = "Taras Vozniuk";
 let mailHref = "mailto:primary.taras.vozniuk@gmail.com";
 let jobTitle = "Software Architect, Development Lead";
