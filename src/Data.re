@@ -1,4 +1,4 @@
-let avatar = [%bs.raw "require('assets/imgs/avatar.png')"];
+let avatar = [%bs.raw "require('assets/imgs/avatar.jpg')"];
 let fullName = "Taras Vozniuk";
 let mailHref = "mailto:primary.taras.vozniuk@gmail.com";
 let jobTitle = "Software Architect, Development Lead";
@@ -7,7 +7,7 @@ let companyTitle = "GeoThings Inc, Taiwan";
 let intro = "
   My work has been greatly cross-functional up to this point.
   After starting as an iOS Developer, I have been involved in full-stack development, cloud architecture, deep-learning among other things. 
-  I am a lead developer at GeoThings Inc. My open-source contribution is primarily centered around redux and ReasonML(ReScript) ecosystem. 
+  I am a lead developer at GeoThings Inc. My open-source contribution is somehow related to redux and ReasonML(ReScript) ecosystems. 
 ";
 
 let githubHref = "https://github.com/ambientlight";
