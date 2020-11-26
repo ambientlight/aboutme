@@ -5,9 +5,10 @@ let jobTitle = "Software Architect, Development Lead";
 let companyTitle = "GeoThings Inc, Taiwan";
 
 let intro = "
-  My work has been greatly cross-functional up to this point.
-  After starting as an iOS Developer, I have been involved in full-stack development, cloud architecture, deep-learning among other things. 
-  I am a lead developer at GeoThings Inc. My open-source contribution is somehow related to redux and ReasonML(ReScript) ecosystems. 
+Lead developer at GeoThings with broad expertise including mobile development, full-stack, cloud architecture, devops as well as deep learning. 
+To some degree my work involved jumping across stacks with quick iterations towards sensible solutions, the dynamism we often experience in startup world. 
+My free time is largely spend tinkering with experimental stacks, most recently with CRDTs and distributed systems using them. 
+My ideas and open source contribution gravitated towards better developer tooling.
 ";
 
 let githubHref = "https://github.com/ambientlight";
