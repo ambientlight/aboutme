@@ -203,10 +203,10 @@ let make = () =>
       <div className=Style.ctaButtonsBlock>
         <button className=Style.ctaButton onClick=(_ev => 
           Webapi.Dom.window 
-          |> Webapi.Dom.Window.open_(~url=Data.githubHref, ~name="", ~features="_blank") 
+          |> Webapi.Dom.Window.open_(~url=Data.cv, ~name="", ~features="_blank") 
           |> ignore
         )>
-          {React.string("Follow on Github")}
+          {React.string("Download CV")}
         </button>
         <a className=Style.ctaButton2 href=Data.mailHref>{React.string("Get In Touch")}</a>
       </div>

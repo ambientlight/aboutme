@@ -3,6 +3,7 @@ let fullName = "Taras Vozniuk";
 let mailHref = "mailto:primary.taras.vozniuk@gmail.com";
 let jobTitle = "Software Architect, Development Lead";
 let companyTitle = "GeoThings Inc, Taiwan";
+let cv = [%bs.raw "require('assets/docs/taras_vozniuk_cv.pdf')"];
 
 let intro = "
 Lead developer at GeoThings with broad expertise including mobile development, full-stack, cloud architecture, devops as well as deep learning. 
@@ -97,7 +98,7 @@ let journey: array(PositionInfo.jobInfo) = [|
   {
     companyName: "GeoThings Inc., Taiwan",
     jobTitle: "Software Architect, Development Lead",
-    duration: "since July 2015",
+    duration: "since Sept 2015",
     imgUrl: [%bs.raw "require('assets/imgs/geothings_logo.png')"],
     href: "https://geothings.tw/",
     description: 

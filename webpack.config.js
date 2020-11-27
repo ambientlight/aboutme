@@ -63,6 +63,13 @@ const config = (env, ifProduction, ifNotProduction) => ({
 				publicPath: "/assets",
       			outputPath: "assets"
 			}
+		}},
+		{ test: /\.(pdf)$/, use: { 
+			loader: 'file-loader', 
+			options: {
+				publicPath: "/assets",
+      			outputPath: "assets"
+			}
 		}}]
 	},
 	plugins: removeEmpty([
