@@ -220,5 +220,5 @@ module Jost {
   );
 };
 
-let montserrat = Montserrat.regular ++ ", Roboto, Arial, Helvetica, sans-serif";
-let jost = Jost.medium ++ ", Roboto, Arial, Helvetica, sans-serif";
+let montserrat = Montserrat.regular ++ ", sans-serif";
+let jost = Jost.medium ++ ", sans-serif";
