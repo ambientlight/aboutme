@@ -7,7 +7,7 @@ let cv = [%bs.raw "require('assets/docs/taras_vozniuk_cv.pdf')"];
 
 let intro = "
 Lead developer at GeoThings with broad expertise including mobile development, full-stack, cloud architecture, devops as well as deep learning. 
-To some degree my work involved jumping across stacks with quick iterations towards sensible solutions, the dynamism we often experience in startup world. 
+To some degree my work involved jumping across stacks with quick iterations towards sensible solutions, the kind of dynamism we often experience in startup world. 
 My free time is largely spend tinkering with experimental stacks, most recently with CRDTs and distributed systems using them. 
 My ideas and open source contribution gravitated towards better developer tooling.
 ";
@@ -131,7 +131,7 @@ let journey: array(PositionInfo.jobInfo) = [|
     imgUrl: [%bs.raw "require('assets/imgs/NCTU_emblem.png')"],
     href: "https://www.nctu.edu.tw/",
     description: 
-      "Fortunate to come and study in Taiwan, I have to give great credit to NCTU for who I am now. Development career was my ultimate goal, but as I was also curious to explore stock trading, I decided to get a double degree. "
+      "Fortunate to come and study in Taiwan, I have to give great credit to NCTU for who I became. Development career was my ultimate goal, but as I was also curious to explore stock trading, I decided to get a double degree. "
   }
 |];
 
