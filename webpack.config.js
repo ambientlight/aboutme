@@ -91,9 +91,7 @@ const config = (env, ifProduction, ifNotProduction) => ({
 		new webpack.NamedModulesPlugin(),
 
 		new CopyWebpackPlugin([
-			// amr codecs, lazy-loaded for arm playback used in gt-card-files
-			// { from: './assets/favicon', to: './' },
-			// copy version file to deployment root
+			{ from: './assets/favicon', to: './' }
 		]),
 
     	env.analyze ? new BundleAnalyzerPlugin() : undefined
