@@ -99,7 +99,7 @@ module Style {
       marginTop(px(0)),
       marginBottom(px(0)),
       marginRight(px(16)),
-      fontWeight(`semiBold),
+      // fontWeight(`semiBold),
 
       Media.atMost(Media.Breakpoint.SmallPhone, [
         fontSize(px(20))
