@@ -73,6 +73,12 @@ module Styles {
     backgroundColor(grey),
     width(SDefs.imageCarouselIndicatorSize),
     height(SDefs.imageCarouselIndicatorSize),
+
+    Media.atMost(Media.Breakpoint.Tablet, [
+      width(px(16)),
+      height(px(16)),
+    ]),
+
     borderRadius(SDefs.imageCarouselIndicatorBorderRadius),
     margin2(~v=zero, ~h=SDefs.imageCarouselHMargin),
 
