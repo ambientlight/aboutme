@@ -136,6 +136,6 @@ let imageCarouselScrollbarHeight = px(0);
 let imageCarouselScrollbarBorderRadius = px(0);
 let imageCarouselItemBorderRadius = px(4);
 let imageCarouselItemMarginRight = `percent(2.);
-let imageCarouselIndicatorSize = px(16);
+let imageCarouselIndicatorSize = px(12);
 let imageCarouselIndicatorBorderRadius = px(8);
 let imageCarouselHMargin = px(4);
