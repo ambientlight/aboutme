@@ -16,7 +16,7 @@ let githubHref = "https://github.com/ambientlight";
 let soHref = "https://stackoverflow.com/users/2380455/ambientlight";
 let linkedInHref = "https://www.linkedin.com/in/tarasvozniuk/";
 
-let awardsTitle = "Awards";
+let awardsTitle = "Recognitions";
 let contribsTitle = "Contributions";
 let journeyTitle = "Journey";
 let projectsTitle = "Projects";
