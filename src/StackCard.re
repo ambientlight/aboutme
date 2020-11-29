@@ -19,7 +19,7 @@ module Styles {
     border(SDefs.sCardBorderWidth, `solid, SDefs.sCardBorderColor),
     borderRadius(SDefs.sCardBorderRadius),
 
-    fontWeight(`medium),
+    fontWeight(`normal),
     padding(SDefs.sCardPadding),
 
     color(white),

@@ -1,9 +1,10 @@
 open Css;
 
+/*
 module Montserrat {
   let thin = fontFace(
     ~fontFamily="Montserrat",
-    ~src=[`url([%bs.raw "require('assets/fonts/Montserrat/Montserrat-Thin.ttf')"])],
+    ~src=[`localUrl("Montserrat"), /* `url([%bs.raw "require('assets/fonts/Montserrat/Montserrat-Thin.ttf')"])*/],
     ~fontStyle=normal,
     ~fontWeight=`num(100),
     ()
@@ -11,7 +12,7 @@ module Montserrat {
 
   let extraLight = fontFace(
     ~fontFamily="Montserrat",
-    ~src=[`url([%bs.raw "require('assets/fonts/Montserrat/Montserrat-ExtraLight.ttf')"])],
+    ~src=[`localUrl("Montserrat"), /* `url([%bs.raw "require('assets/fonts/Montserrat/Montserrat-ExtraLight.ttf')"])*/],
     ~fontStyle=normal,
     ~fontWeight=`num(200),
     ()
@@ -19,7 +20,7 @@ module Montserrat {
 
   let light = fontFace(
     ~fontFamily="Montserrat",
-    ~src=[`url([%bs.raw "require('assets/fonts/Montserrat/Montserrat-Light.ttf')"])],
+    ~src=[`localUrl("Montserrat"), /* `url([%bs.raw "require('assets/fonts/Montserrat/Montserrat-Light.ttf')"])*/],
     ~fontStyle=normal,
     ~fontWeight=`num(300),
     ()
@@ -27,7 +28,7 @@ module Montserrat {
 
   let regular = fontFace(
     ~fontFamily="Montserrat",
-    ~src=[`url([%bs.raw "require('assets/fonts/Montserrat/Montserrat-Regular.ttf')"])],
+    ~src=[`localUrl("Montserrat"), /* `url([%bs.raw "require('assets/fonts/Montserrat/Montserrat-Regular.ttf')"]) */],
     ~fontStyle=normal,
     ~fontWeight=`num(400),
     ()
@@ -35,7 +36,7 @@ module Montserrat {
 
   let medium = fontFace(
     ~fontFamily="Montserrat",
-    ~src=[`url([%bs.raw "require('assets/fonts/Montserrat/Montserrat-Medium.ttf')"])],
+    ~src=[`localUrl("Montserrat"), /* `url([%bs.raw "require('assets/fonts/Montserrat/Montserrat-Medium.ttf')"]) */],
     ~fontStyle=normal,
     ~fontWeight=`num(500),
     ()
@@ -43,7 +44,7 @@ module Montserrat {
 
   let semiBold = fontFace(
     ~fontFamily="Montserrat",
-    ~src=[`url([%bs.raw "require('assets/fonts/Montserrat/Montserrat-SemiBold.ttf')"])],
+    ~src=[`localUrl("Montserrat"), /* `url([%bs.raw "require('assets/fonts/Montserrat/Montserrat-SemiBold.ttf')"]) */],
     ~fontStyle=normal,
     ~fontWeight=`num(600),
     ()
@@ -51,7 +52,7 @@ module Montserrat {
 
   let bold = fontFace(
     ~fontFamily="Montserrat",
-    ~src=[`url([%bs.raw "require('assets/fonts/Montserrat/Montserrat-Bold.ttf')"])],
+    ~src=[`localUrl("Montserrat"), /* `url([%bs.raw "require('assets/fonts/Montserrat/Montserrat-Bold.ttf')"]) */],
     ~fontStyle=normal,
     ~fontWeight=`num(700),
     ()
@@ -59,7 +60,7 @@ module Montserrat {
 
   let extraBold = fontFace(
     ~fontFamily="Montserrat",
-    ~src=[`url([%bs.raw "require('assets/fonts/Montserrat/Montserrat-ExtraBold.ttf')"])],
+    ~src=[`localUrl("Montserrat"), /* `url([%bs.raw "require('assets/fonts/Montserrat/Montserrat-ExtraBold.ttf')"]) */],
     ~fontStyle=normal,
     ~fontWeight=`num(800),
     ()
@@ -67,17 +68,19 @@ module Montserrat {
 
   let black = fontFace(
     ~fontFamily="Montserrat",
-    ~src=[`url([%bs.raw "require('assets/fonts/Montserrat/Montserrat-Black.ttf')"])],
+    ~src=[`localUrl("Montserrat"), /* `url([%bs.raw "require('assets/fonts/Montserrat/Montserrat-Black.ttf')"]) */],
     ~fontStyle=normal,
     ~fontWeight=`num(900),
     ()
   );
 };
+*/
 
+/*
 module Jost {
   let hairline = fontFace(
     ~fontFamily="Jost",
-    ~src=[`url([%bs.raw "require('assets/fonts/Jost/Jost-100-Hairline.ttf')"])],
+    ~src=[`localUrl("Jost"), `url([%bs.raw "require('assets/fonts/Jost/Jost-100-Hairline.ttf')"])],
     ~fontStyle=normal,
     ~fontWeight=`num(100),
     ()
@@ -85,7 +88,7 @@ module Jost {
 
   let hairlineItalic = fontFace(
     ~fontFamily="Jost",
-    ~src=[`url([%bs.raw "require('assets/fonts/Jost/Jost-100-HairlineItalic.ttf')"])],
+    ~src=[`localUrl("Jost"), `url([%bs.raw "require('assets/fonts/Jost/Jost-100-HairlineItalic.ttf')"])],
     ~fontStyle=italic,
     ~fontWeight=`num(100),
     ()
@@ -93,7 +96,7 @@ module Jost {
 
   let thin = fontFace(
     ~fontFamily="Jost",
-    ~src=[`url([%bs.raw "require('assets/fonts/Jost/Jost-200-Thin.ttf')"])],
+    ~src=[`localUrl("Jost"), `url([%bs.raw "require('assets/fonts/Jost/Jost-200-Thin.ttf')"])],
     ~fontStyle=normal,
     ~fontWeight=`num(200),
     ()
@@ -101,7 +104,7 @@ module Jost {
 
   let thinItalic = fontFace(
     ~fontFamily="Jost",
-    ~src=[`url([%bs.raw "require('assets/fonts/Jost/Jost-200-ThinItalic.ttf')"])],
+    ~src=[`localUrl("Jost"), `url([%bs.raw "require('assets/fonts/Jost/Jost-200-ThinItalic.ttf')"])],
     ~fontStyle=italic,
     ~fontWeight=`num(200),
     ()
@@ -109,7 +112,7 @@ module Jost {
 
   let light = fontFace(
     ~fontFamily="Jost",
-    ~src=[`url([%bs.raw "require('assets/fonts/Jost/Jost-300-Light.ttf')"])],
+    ~src=[`localUrl("Jost"), `url([%bs.raw "require('assets/fonts/Jost/Jost-300-Light.ttf')"])],
     ~fontStyle=normal,
     ~fontWeight=`num(300),
     ()
@@ -117,7 +120,7 @@ module Jost {
 
   let lightItalic = fontFace(
     ~fontFamily="Jost",
-    ~src=[`url([%bs.raw "require('assets/fonts/Jost/Jost-300-LightItalic.ttf')"])],
+    ~src=[`localUrl("Jost"), `url([%bs.raw "require('assets/fonts/Jost/Jost-300-LightItalic.ttf')"])],
     ~fontStyle=italic,
     ~fontWeight=`num(300),
     ()
@@ -125,7 +128,7 @@ module Jost {
 
   let book = fontFace(
     ~fontFamily="Jost",
-    ~src=[`url([%bs.raw "require('assets/fonts/Jost/Jost-400-Book.ttf')"])],
+    ~src=[`localUrl("Jost"), `url([%bs.raw "require('assets/fonts/Jost/Jost-400-Book.ttf')"])],
     ~fontStyle=normal,
     ~fontWeight=`num(400),
     ()
@@ -133,7 +136,7 @@ module Jost {
 
   let bookItalic = fontFace(
     ~fontFamily="Jost",
-    ~src=[`url([%bs.raw "require('assets/fonts/Jost/Jost-400-BookItalic.ttf')"])],
+    ~src=[`localUrl("Jost"), `url([%bs.raw "require('assets/fonts/Jost/Jost-400-BookItalic.ttf')"])],
     ~fontStyle=italic,
     ~fontWeight=`num(400),
     ()
@@ -141,7 +144,7 @@ module Jost {
 
   let medium = fontFace(
     ~fontFamily="Jost",
-    ~src=[`url([%bs.raw "require('assets/fonts/Jost/Jost-500-Medium.ttf')"])],
+    ~src=[`localUrl("Jost"), `url([%bs.raw "require('assets/fonts/Jost/Jost-500-Medium.ttf')"])],
     ~fontStyle=normal,
     ~fontWeight=`num(500),
     ()
@@ -149,7 +152,7 @@ module Jost {
 
   let mediumItalic = fontFace(
     ~fontFamily="Jost",
-    ~src=[`url([%bs.raw "require('assets/fonts/Jost/Jost-500-MediumItalic.ttf')"])],
+    ~src=[`localUrl("Jost"), `url([%bs.raw "require('assets/fonts/Jost/Jost-500-MediumItalic.ttf')"])],
     ~fontStyle=italic,
     ~fontWeight=`num(500),
     ()
@@ -157,7 +160,7 @@ module Jost {
 
   let semi = fontFace(
     ~fontFamily="Jost",
-    ~src=[`url([%bs.raw "require('assets/fonts/Jost/Jost-600-Semi.ttf')"])],
+    ~src=[`localUrl("Jost"), `url([%bs.raw "require('assets/fonts/Jost/Jost-600-Semi.ttf')"])],
     ~fontStyle=normal,
     ~fontWeight=`num(600),
     ()
@@ -165,7 +168,7 @@ module Jost {
 
   let semiItalic = fontFace(
     ~fontFamily="Jost",
-    ~src=[`url([%bs.raw "require('assets/fonts/Jost/Jost-600-SemiItalic.ttf')"])],
+    ~src=[`localUrl("Jost"), `url([%bs.raw "require('assets/fonts/Jost/Jost-600-SemiItalic.ttf')"])],
     ~fontStyle=italic,
     ~fontWeight=`num(600),
     ()
@@ -173,7 +176,7 @@ module Jost {
 
   let bold = fontFace(
     ~fontFamily="Jost",
-    ~src=[`url([%bs.raw "require('assets/fonts/Jost/Jost-700-Bold.ttf')"])],
+    ~src=[`localUrl("Jost"), `url([%bs.raw "require('assets/fonts/Jost/Jost-700-Bold.ttf')"])],
     ~fontStyle=normal,
     ~fontWeight=`num(700),
     ()
@@ -181,7 +184,7 @@ module Jost {
 
   let boldItalic = fontFace(
     ~fontFamily="Jost",
-    ~src=[`url([%bs.raw "require('assets/fonts/Jost/Jost-700-BoldItalic.ttf')"])],
+    ~src=[`localUrl("Jost"), `url([%bs.raw "require('assets/fonts/Jost/Jost-700-BoldItalic.ttf')"])],
     ~fontStyle=italic,
     ~fontWeight=`num(700),
     ()
@@ -189,7 +192,7 @@ module Jost {
 
   let heavy = fontFace(
     ~fontFamily="Jost",
-    ~src=[`url([%bs.raw "require('assets/fonts/Jost/Jost-800-Heavy.ttf')"])],
+    ~src=[`localUrl("Jost"), `url([%bs.raw "require('assets/fonts/Jost/Jost-800-Heavy.ttf')"])],
     ~fontStyle=normal,
     ~fontWeight=`num(800),
     ()
@@ -197,7 +200,7 @@ module Jost {
 
   let heavyItalic = fontFace(
     ~fontFamily="Jost",
-    ~src=[`url([%bs.raw "require('assets/fonts/Jost/Jost-800-HeavyItalic.ttf')"])],
+    ~src=[`localUrl("Jost"), `url([%bs.raw "require('assets/fonts/Jost/Jost-800-HeavyItalic.ttf')"])],
     ~fontStyle=italic,
     ~fontWeight=`num(800),
     ()
@@ -205,7 +208,7 @@ module Jost {
 
   let black = fontFace(
     ~fontFamily="Jost",
-    ~src=[`url([%bs.raw "require('assets/fonts/Jost/Jost-900-Black.ttf')"])],
+    ~src=[`localUrl("Jost"), `url([%bs.raw "require('assets/fonts/Jost/Jost-900-Black.ttf')"])],
     ~fontStyle=normal,
     ~fontWeight=`num(900),
     ()
@@ -213,12 +216,13 @@ module Jost {
 
   let blackItalic = fontFace(
     ~fontFamily="Jost",
-    ~src=[`url([%bs.raw "require('assets/fonts/Jost/Jost-900-BlackItalic.ttf')"])],
+    ~src=[`localUrl("Jost"), `url([%bs.raw "require('assets/fonts/Jost/Jost-900-BlackItalic.ttf')"])],
     ~fontStyle=italic,
     ~fontWeight=`num(900),
     ()
   );
 };
+*/
 
-let montserrat = Montserrat.regular ++ ", sans-serif";
-let jost = Jost.medium ++ ", sans-serif";
+let montserrat = "Montserrat, sans-serif";
+let jost = "Jost, sans-serif";

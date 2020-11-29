@@ -9,7 +9,7 @@ module Styles {
   ]);
 
   let projectTitle = style([
-    fontWeight(`medium),
+    fontWeight(`normal),
     fontSize(SDefs.projectTitleFontSize)
   ]);
 
