@@ -6,10 +6,10 @@ let companyTitle = "GeoThings Inc, Taiwan";
 let cv = [%bs.raw "require('assets/docs/taras_vozniuk_cv.pdf')"];
 
 let intro = "
-Lead developer at GeoThings with broad expertise including mobile development, full-stack, cloud architecture, devops as well as deep learning. 
-To some degree my work involved jumping across stacks with quick iterations towards sensible solutions, the kind of dynamism we often experience in startup world. 
-My free time is largely spend tinkering with experimental stacks, most recently with CRDTs and distributed systems using them. 
-My ideas and open source contribution gravitated towards better developer tooling.
+  Lead developer at GeoThings with broad expertise including mobile development, full-stack, cloud architecture, devops as well as deep learning. 
+  Most of my time now is occupied by full stack development, also by building and maintaining distributed systems hosted on AWS as well as on-premise(with kubernetes) which I really enjoyed thus far. 
+  My free time is largely spend tinkering with experimental stacks, most recently with CRDTs and distributed systems using them. 
+  My ideas and open source contribution gravitated towards better developer tooling.
 ";
 
 let githubHref = "https://github.com/ambientlight";
@@ -49,7 +49,7 @@ let contribs: array(ContributionInfo.t) = [|
     href: "https://github.com/aws-amplify/amplify-cli/pulls?q=is%3Apr+author%3Aambientlight",
     title: "amplify-cli",
     description: "
-      AWS-Amplify (originated from scaphold) brought GQL schema-defined provisioning to AWS which was interesting to explore, yet at that time some key features were missing, so I thought to work on few. 
+      AWS-Amplify (originated from scaphold) brought GQL schema-driven provisioning to AWS which was interesting to explore, yet at that time some key features were missing, so I thought to work on few. 
       Special thanks to AWS Amplify team who were very helpful in the process.
     "
   },
