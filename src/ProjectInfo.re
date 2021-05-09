@@ -42,7 +42,7 @@ module Styles {
   let description = style([
     backgroundColor(SDefs.projectDescriptionBackgrounColor),
     border(SDefs.projectDescriptionBorderWidth, `solid, SDefs.projectDescriptionBorderColor),
-    borderRadius(SDefs.projectDescriptionBorderRadius),
+    //borderRadius(SDefs.projectDescriptionBorderRadius),
 
     padding(SDefs.projectDescriptionPadding),
     width(`percent(100.)),
@@ -101,7 +101,7 @@ module Styles {
 
   let stackCard = style([
     backgroundColor(hex("666")),
-    borderRadius(px(4)),
+    // borderRadius(px(4)),
     padding2(~v=px(4), ~h=px(8)),
     fontSize(px(14)),
     margin4(~left=zero, ~top=px(4), ~right=px(4), ~bottom=px(4)),
@@ -188,7 +188,7 @@ let make = (~info: projectInfo) => {
       </div>
 
       <div className=Styles.description>
-        <h4 className=Styles.descriptionHeader>{React.string("Description")}</h4>
+        // <h4 className=Styles.descriptionHeader>{React.string("Description")}</h4>
 
         <div className=Styles.iconBlock>
           <div className=Styles.iconDetail>{ 

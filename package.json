@@ -1,5 +1,5 @@
 {
-  "name": "abountme",
+  "name": "aboutme",
   "version": "0.0.1",
   "scripts": {
     "clean": "./node_modules/.bin/bsb -clean-world",
@@ -9,7 +9,7 @@
     "bsb": "./node_modules/.bin/bsb -make-world -w"
   },
   "keywords": [],
-  "author": "tracereplay",
+  "author": "ambientlight",
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/plugin-transform-react-jsx": "^7.3.0",

@@ -17,7 +17,7 @@ module Styles {
 
     backgroundColor(SDefs.sCardBackgrounColor),
     border(SDefs.sCardBorderWidth, `solid, SDefs.sCardBorderColor),
-    borderRadius(SDefs.sCardBorderRadius),
+    // borderRadius(SDefs.sCardBorderRadius),
 
     fontWeight(`normal),
     padding(SDefs.sCardPadding),

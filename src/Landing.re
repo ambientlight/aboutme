@@ -51,7 +51,7 @@ let make = () => {
       <div className=Styles.innerContent>
         <Stacks/>
         <Journey/>
-        <Contributions/>
+        // <Contributions/>
         <Projects/>
         <Awards/>
       </div>

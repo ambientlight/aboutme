@@ -16,7 +16,13 @@ module Styles {
   let entityImg = style([
     width(SDefs.journeyItemImgSize),
     height(SDefs.journeyItemImgSize),
-    borderRadius(SDefs.journeyItemImgBorderRadius),
+    padding(SDefs.journeyItemPadding)
+  ]);
+
+  let entityImgBgCover = style([
+    width(SDefs.journeyItemImgSize),
+    height(SDefs.journeyItemImgSize),
+    // borderRadius(SDefs.journeyItemImgBorderRadius),
     backgroundColor(white),
     padding(SDefs.journeyItemPadding)
   ]);
@@ -65,14 +71,16 @@ type jobInfo = {
   duration: string,
   imgUrl: string,
   description: string,
-  href: string
+  href: string,
+
+  bgCover: bool
 };
 
 [@react.component]
 let make = (~info: jobInfo) => 
   <div className=Styles.positionRow>
     <a className=Styles.positionImgAnchor href=info.href>
-      <img className=Styles.entityImg src={info.imgUrl}/>
+      <img className={info.bgCover ? Styles.entityImgBgCover : Styles.entityImg} src={info.imgUrl}/>
     </a>
     <div className=Styles.textBlock>
       <h3 className=Styles.companyName><a href=info.href>{React.string(info.companyName)}</a></h3>

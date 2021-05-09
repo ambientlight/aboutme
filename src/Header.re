@@ -128,9 +128,9 @@ module Navigation {
   [@react.component]
   let make = () => 
     <div className=Styles.root>
-      <NavigationItem navId="stacks">{React.string(Data.stacksTitle)}</NavigationItem>
+      // <NavigationItem navId="stacks">{React.string(Data.stacksTitle)}</NavigationItem>
       <NavigationItem navId="journey">{React.string(Data.journeyTitle)}</NavigationItem>
-      <NavigationItem navId="contrib">{React.string(Data.contribsTitle)}</NavigationItem>
+      // <NavigationItem navId="contrib">{React.string(Data.contribsTitle)}</NavigationItem>
       <NavigationItem navId="proj">{React.string(Data.projectsTitle)}</NavigationItem>
       <NavigationItem navId="awards">{React.string(Data.awardsTitle)}</NavigationItem>
     </div>
@@ -139,6 +139,6 @@ module Navigation {
 [@react.component]
 let make = () => 
   <header className=Styles.root>
-    <Logo/>
+    // <Logo/>
     <Navigation/>
   </header>

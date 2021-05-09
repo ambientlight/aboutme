@@ -65,13 +65,13 @@ let make = () =>
     </div>
 
     <div className=Styles.footerInfo>
-      <a href=Data.mailHref>{React.string(Data.fullName)}</a>
-      {React.string(", made with ")}
+      // <a href=Data.mailHref>{React.string(Data.fullName)}</a>
+      {React.string("made with ")}
       <span style={ReactDOM.Style.make(~color="#e25555", ())}>{React.string({j|❤|j})}</span>
       {React.string(" in reasonml")}
       
       <div className=Styles.attrib>
-        <a href="https://github.com/ambientlight/aboutme">{React.string("source on github")}</a>{React.string(", ")}
+        // <a href="https://github.com/ambientlight/aboutme">{React.string("source on github")}</a>{React.string(", ")}
         <a href="https://themeforest.net/user/lmpixels">{React.string("LMPixels")}</a>{React.string(" inspired design")}
       </div>
     </div>

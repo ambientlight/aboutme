@@ -20,12 +20,12 @@ let make = () =>
       |> React.array
     }
     </div>
-    <Seperator navId="stacks" title="Stacks"/>
-    <div className=Styles.root>
-    {
-      Data.stacks
-      |> Array.map(lang => <StackCard info=lang isCompact=true/>)
-      |> React.array
-    }
-    </div>
+    // <Seperator navId="stacks" title="Stacks"/>
+    // <div className=Styles.root>
+    // {
+    //   Data.stacks
+    //   |> Array.map(lang => <StackCard info=lang isCompact=true/>)
+    //   |> React.array
+    // }
+    // </div>
   </>

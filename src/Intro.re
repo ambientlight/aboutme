@@ -109,11 +109,13 @@ module Style {
     selector("& > a", [
       display(`flex),
       alignItems(`center),
-
+      opacity(0.3),
+      transform(translateY(px(2))),
       //animation(moveInBottom, ~duration=500, ~timingFunction=Types.TimingFunction.easeOut, ~delay=750),
       
       selector("&:hover", [
-        transform(SDefs.helloLinkHoverTransform)
+        opacity(1.0),
+        // transform(SDefs.helloLinkHoverTransform)
       ]),
     ]),
 
@@ -134,7 +136,7 @@ module Style {
     padding2(~v=SDefs.ctaButtonVPadding, ~h=SDefs.ctaButtonHPadding),
 
     border(SDefs.ctaButtonBorderWidth, `solid, SDefs.selectionGray),
-    borderRadius(SDefs.ctaButtonBorderRadius),
+    // borderRadius(SDefs.ctaButtonBorderRadius),
     background(SDefs.buttonBgGray),
     
     fontSize(SDefs.ctaButtonFontSize),
