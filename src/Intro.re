@@ -63,6 +63,7 @@ module Style {
   let jobTitle = style([
     color(grey),
     fontWeight(`semiBold),
+    marginBottom(px(8)),
 
     fontFamily(`custom(Fonts.montserrat)),
     // fontWeight(`light)
