@@ -54,6 +54,7 @@ let make = () => {
         // <Contributions/>
         <Projects/>
         <Awards/>
+        <Stats/>
       </div>
       
       <Footer/>

@@ -20,6 +20,7 @@ let contribsTitle = "Contributions";
 let journeyTitle = "Journey";
 let projectsTitle = "Misc";
 let stacksTitle = "Stacks";
+let statsTitle = "Stats";
 
 let awards: array(ProjectInfo.projectInfo) = [|
   {
@@ -168,7 +169,7 @@ let projects: array(ProjectInfo.projectInfo) = [|
     media: [|
       Youtube("https://www.youtube.com/embed/wBriMhGLYWQ"),
       Text("
-        @ambientlight alias I am often using came from the project I've worked on with my talented friends from NCTU for the beyond future mobile workshop. 
+        @ambientlight alias I often use came from the project I've worked on with my talented friends from NCTU for the beyond future mobile workshop. 
         We've built a couple of flying prototypes that are safe to operate in indoor environment, which basically involved swapping quad-copter with helium airship. 
         We were experimenting by purchasing various small drones, reverse engineering and stripping them apart, and then fitting some of their components to our helium balloons, which was ultimate fun. 
       ")
