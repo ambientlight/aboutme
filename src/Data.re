@@ -3,7 +3,7 @@ let fullName = "Taras Vozniuk";
 let mailHref = "mailto:primary.taras.vozniuk@gmail.com";
 let jobTitle = "Software Engineer II, Microsoft";
 let companyTitle = "";
-let cv = [%bs.raw "require('assets/docs/taras_vozniuk_cv.pdf')"];
+let cv = [%bs.raw "require('assets/docs/taras_vozniuk.pdf')"];
 
 let intro = "
   While my recent experience involved working on various map interactions and tooling,
