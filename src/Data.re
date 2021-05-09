@@ -35,7 +35,7 @@ let awards: array(ProjectInfo.projectInfo) = [|
       "While we've managed to get through entire competition and get into the winning batch, the memories are rather bittersweat. " ++
       "We've tailored our PoC to the competition filling our early prototype with fancy image recognition and deep learning " ++ 
       "giving us good chance to win which felt like validation while it was the opposite. Countless nights and weekends spend coding for more then a year after the competition " ++
-      "were absolutely misaligned to what could appeal to our early users and resulted in nothing but a burnout. Lesson learned. ",
+      "were absolutely misaligned to what could appeal to our early users and resulted in nothing but the burnout. Lesson learned. ",
     stackComponents: [||]
   },
   {
