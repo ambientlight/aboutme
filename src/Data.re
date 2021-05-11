@@ -134,7 +134,7 @@ let journey: array(PositionInfo.jobInfo) = [|
       "I have joined GeoThings as our mission with social impact got me really bought in to the idea. " ++
       "I started as an iOS developer working on OSM map-oriented application. " ++ 
       "Gradually, I transitioned away from mobile and became involved in other areas: server-side for maps, front-end, as well as machine learning. " ++
-      "The last project I was involved in was a scalable distributed data pipeline build with on-premise Kubernetes for processing and collection of large volume of IoT sensor data.  
+      "The last project I was involved in was a scalable distributed data pipeline build for on-premise Kubernetes for processing and collection of large volume of IoT sensor data.  
     
       Without overstatement, it was a roller coaster ride for our team, we've worked hard, pivoted a few times, but it was an incredible experience nonetheless."
   },
