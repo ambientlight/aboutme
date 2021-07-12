@@ -37,4 +37,9 @@ let make = () =>
         "__html": "<codersrank-skills-chart username=\"ambientlight\" skills=\"Swift,Python,TypeScript,Objective-C,JavaScript,C#,Reason,Java,Kotlin,C++\" legend=\"\" labels=\"\" tooltip=\"\" show-other-skills=\"\"></codersrank-skills-chart>" 
       }></div>
     </div>
+    // <div className=Styles.statsGroup>
+    //   <div className=Styles.embedBase dangerouslySetInnerHTML={ 
+    //     "__html": "<codersrank-timeline type=\"technologies\" username=\"ambientlight\"></codersrank-timeline>" 
+    //   }></div>
+    // </div>
   </>

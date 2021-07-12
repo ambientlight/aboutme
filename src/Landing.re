@@ -53,7 +53,7 @@ let make = () => {
         <Journey/>
         // <Contributions/>
         <Projects/>
-        <Awards/>
+        // <Awards/>
         <Stats/>
       </div>
       

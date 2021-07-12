@@ -6,8 +6,8 @@ let companyTitle = "";
 let cv = [%bs.raw "require('assets/docs/taras_vozniuk.pdf')"];
 
 let intro = "
-  While my recent experience involved working on various map interactions and tooling,
-  I am fortunate to have worked in various domains including mobile development, full-stack, cloud architecture, devops as 
+  My recent experience involved working on various map interactions and tooling.
+  I have also worked in few domains including mobile development, full-stack, cloud architecture, devops as 
   well as deep learning. My free time is largely spend tinkering with experimental stacks.
 ";
 
@@ -120,8 +120,7 @@ let journey: array(PositionInfo.jobInfo) = [|
     href: "https://microsoft.com",
     bgCover: true,
     description:
-      "Building various GIS-related tooling as part of incredible team at Microsoft. " ++
-      "Curious to see what impact will I make over the long term, but the range of things the one can work on is fascinating."
+      "SDK team at Azure Maps."
   },
   {
     companyName: "GeoThings Inc., Taiwan",
@@ -134,9 +133,7 @@ let journey: array(PositionInfo.jobInfo) = [|
       "I have joined GeoThings as our mission with social impact got me really bought in to the idea. " ++
       "I started as an iOS developer working on OSM map-oriented application. " ++ 
       "Gradually, I transitioned away from mobile and became involved in other areas: server-side for maps, front-end, as well as machine learning. " ++
-      "The last project I was involved in was a scalable distributed data pipeline build for on-premise Kubernetes for processing and collection of large volume of IoT sensor data.  
-    
-      Without overstatement, it was a roller coaster ride for our team, we've worked hard, pivoted a few times, but it was an incredible experience nonetheless."
+      "Without overstatement, it was a roller coaster ride for our team, we've worked hard, pivoted a few times, but it was an incredible experience nonetheless."
   },
   {
     companyName: "Sixnology Inc., Taiwan",
@@ -146,7 +143,6 @@ let journey: array(PositionInfo.jobInfo) = [|
     href: "https://www.sixnology.com/",
     bgCover: true,
     description: 
-      "Grateful for the given opportunity at such a young age, " ++ 
       "I've joined in my junior year and was tasked with building a iOS player that would stream audio to a DLNA-compliant speaker we were developing. " ++ 
       "DLNA/UPnP was still pretty much alive at that time and since there was no support for it in iOS, it was really fun to develop. " ++ 
       "I've learned a lot overall, build my iOS background and had some great time."

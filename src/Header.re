@@ -132,7 +132,7 @@ module Navigation {
       <NavigationItem navId="journey">{React.string(Data.journeyTitle)}</NavigationItem>
       // <NavigationItem navId="contrib">{React.string(Data.contribsTitle)}</NavigationItem>
       <NavigationItem navId="proj">{React.string(Data.projectsTitle)}</NavigationItem>
-      <NavigationItem navId="indiehacking">{React.string(Data.awardsTitle)}</NavigationItem>
+      // <NavigationItem navId="indiehacking">{React.string(Data.awardsTitle)}</NavigationItem>
       <NavigationItem navId="stats">{React.string(Data.statsTitle)}</NavigationItem>
     </div>
 };
