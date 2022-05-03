@@ -1,7 +1,7 @@
 let avatar = [%bs.raw "require('assets/imgs/avatar.jpeg')"];
 let fullName = "Taras Vozniuk";
 let mailHref = "mailto:primary.taras.vozniuk@gmail.com";
-let jobTitle = "Software Engineer II, Microsoft";
+let jobTitle = "Senior Software Engineer, Microsoft";
 let companyTitle = "";
 let cv = [%bs.raw "require('assets/docs/taras_vozniuk.pdf')"];
 

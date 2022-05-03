@@ -49,10 +49,10 @@ let make = () => {
       <Intro/>
       
       <div className=Styles.innerContent>
-        <Stacks/>
-        <Journey/>
+        // <Stacks/>
+        // <Journey/>
         // <Contributions/>
-        <Projects/>
+        // <Projects/>
         // <Awards/>
         <Stats/>
       </div>
