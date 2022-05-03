@@ -129,11 +129,11 @@ module Navigation {
   let make = () => 
     <div className=Styles.root>
       // <NavigationItem navId="stacks">{React.string(Data.stacksTitle)}</NavigationItem>
-      <NavigationItem navId="journey">{React.string(Data.journeyTitle)}</NavigationItem>
+      // <NavigationItem navId="journey">{React.string(Data.journeyTitle)}</NavigationItem>
       // <NavigationItem navId="contrib">{React.string(Data.contribsTitle)}</NavigationItem>
-      <NavigationItem navId="proj">{React.string(Data.projectsTitle)}</NavigationItem>
+      // <NavigationItem navId="proj">{React.string(Data.projectsTitle)}</NavigationItem>
       // <NavigationItem navId="indiehacking">{React.string(Data.awardsTitle)}</NavigationItem>
-      <NavigationItem navId="stats">{React.string(Data.statsTitle)}</NavigationItem>
+      // <NavigationItem navId="stats">{React.string(Data.statsTitle)}</NavigationItem>
     </div>
 };
 
