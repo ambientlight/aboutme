@@ -34,7 +34,7 @@ let make = () =>
         "__html": "<codersrank-summary style=\"--header-bg-color: #333; --badge-bg-color: #999; --bg-color: #333; --border-radius: 0px;\" username=\"ambientlight\"></codersrank-summary>" 
       }></div>
       <div className={Css.merge([Styles.embedBase, Styles.chartEffects])} dangerouslySetInnerHTML={ 
-        "__html": "<codersrank-skills-chart username=\"ambientlight\" skills=\"Swift,Python,TypeScript,Objective-C,JavaScript,C#,Reason,Java,Kotlin,C++\" legend=\"\" labels=\"\" tooltip=\"\" show-other-skills=\"\"></codersrank-skills-chart>" 
+        "__html": "<codersrank-skills-chart username=\"ambientlight\" skills=\"Swift,Python,TypeScript,Objective-C,JavaScript,C#,Reason,Java,Go,C++\" legend=\"\" labels=\"\" tooltip=\"\" show-other-skills=\"\"></codersrank-skills-chart>" 
       }></div>
     </div>
     // <div className=Styles.statsGroup>
